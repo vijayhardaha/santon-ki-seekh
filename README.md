@@ -21,7 +21,7 @@
 - [भजन: राम भजा सो जीता जग में (कबीर साहब)](/docs/bhajans/ram-bhaja-so-jeeta-jag-me.md)
 - [भजन: राम बिन तन की ताप न जाई (कबीर साहब)](/docs/bhajans/ram-bin-tan-ki-taap-n-jaai.md)
 - [भजन: राम निरंजन न्यारा रे (कबीर साहब)](/docs/bhajans/ram-niranjan-nyaara-re.md)
-- [भजन: तेरा मेरा मनुवा कैसे एक होई रे (कबीर साहब)](/docs/bhajans/tera-mera-manuva-kaise-ek-hoii-re.md)
+- [भजन: तेरा मेरा मनुआ कैसे एक होई रे (कबीर साहब)](/docs/bhajans/tera-mera-manuva-kaise-ek-hoii-re.md)
 - [भजन: तोहि मोहि लगन लगाय रे फकीरवा (कबीर साहब)](/docs/bhajans/tohi-mohi-lagan-lagaaye-re-phakirava.md)
 
 ### दोहे संग्रह
