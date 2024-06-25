@@ -32,17 +32,19 @@ export function generateTxt(data, suffix = "") {
  * Generate markdown data from input data.
  * @param {Array} data - Input data.
  * @param {string} [suffix] - Optional suffix to append to each set. Default is an empty string.
+ * @param {string} [title] - Optional title to prepend to document. Default is an empty string.
  * @returns {string} - Formatted markdown data.
  */
-export function generateMd(data, suffix = "") {
-  const title = "# संत कबीर दास जी के दोहे \n\n";
+export function generateMd(data, suffix = "", title = "") {
+  const titlePrefix = title ? `# ${title} \n\n` : "";
   const content = data
     .map((set) => {
       const formattedSet = `${set.join("\\\n")}`;
       return suffix ? `${formattedSet}\n\n${suffix}` : formattedSet;
     })
     .join("\n\n---\n\n");
-  return title + content;
+
+  return titlePrefix + content;
 }
 
 /**
@@ -63,7 +65,7 @@ export async function generateCSV(data) {
  */
 export const generateData = async (builder, type) => {
   const {
-    outputDir, fileName, data, txtSuffix,
+    outputDir, fileName, data, txtSuffix, mdTitle,
   } = builder;
   const path = joinPath(outputDir, `${fileName}.${type}`);
   let fileData;
@@ -79,7 +81,7 @@ export const generateData = async (builder, type) => {
     fileData = generateTxt(data, txtSuffix);
     break;
   case "md":
-    fileData = generateMd(data, txtSuffix);
+    fileData = generateMd(data, txtSuffix, mdTitle);
     break;
   case "csv":
     fileData = await generateCSV(data);

@@ -11,6 +11,7 @@ const QuoteMeta = {
   id: "ap-quotes",
   fileName: "acharya-prashant-quotes",
   txtSuffix: "~ आचार्य प्रशांत",
+  mdTitle: "आचार्य प्रशांत के उद्धरण",
   data: dataSet,
 };
 

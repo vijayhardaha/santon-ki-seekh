@@ -243,6 +243,7 @@ const BhajanMeta = {
   id: "kabir-bhajan",
   fileName: "kabir-ke-bhajan",
   txtSuffix: "",
+  mdTitle: "संत कबीर दास जी के भजन",
   data: dataSet,
 };
 

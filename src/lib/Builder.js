@@ -13,11 +13,12 @@ const Builder = {
    * @async
    */
   run: async ({
-    id, fileName, txtSuffix, data,
+    id, fileName, txtSuffix, mdTitle, data,
   }) => {
     Builder.id = id;
     Builder.fileName = fileName;
     Builder.txtSuffix = txtSuffix;
+    Builder.mdTitle = mdTitle;
     Builder.outputDirName = "dist";
     Builder.data = data;
     Builder.outputDir = joinPath(process.cwd(), Builder.outputDirName);

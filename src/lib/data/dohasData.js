@@ -36,6 +36,7 @@ const DohaMeta = {
   id: "kabir-dohe",
   fileName: "kabir-ke-dohe",
   txtSuffix: "~ संत कबीर दास जी",
+  mdTitle: "संत कबीर दास जी के दोहे",
   data: dataSet,
 };
 
