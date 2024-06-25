@@ -38,7 +38,7 @@ export function generateMd(data, suffix = "") {
   const title = "# संत कबीर दास जी के दोहे \n\n";
   const content = data
     .map((set) => {
-      const formattedSet = `**${set.join("\\\n")}**`;
+      const formattedSet = `${set.join("\\\n")}`;
       return suffix ? `${formattedSet}\n\n${suffix}` : formattedSet;
     })
     .join("\n\n---\n\n");
