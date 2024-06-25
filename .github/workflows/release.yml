@@ -32,7 +32,7 @@ jobs:
       run: npm run build
 
     - name: Zip the dist folder
-      run: zip -r dist.zip dist/
+      run: zip -r all-in-one-assets.zip dist/
 
     - name: Find files to upload
       id: find_files
@@ -47,7 +47,7 @@ jobs:
       uses: ncipollo/release-action@v1
       with:
         artifacts: |
-          dist.zip
+          all-in-one-assets.zip
           ${{ env.files }}
         token: ${{ env.GITHUB_TOKEN }}
         tag: ${{ github.ref }}
