@@ -37,8 +37,10 @@ jobs:
     - name: Find files to upload
       id: find_files
       run: |
-        files=$(find . -type f \( -name "*.txt" -o -name "*.json" -o -name "*.md" -o -name "*.csv" \))
-        echo "files=$files" >> $GITHUB_ENV
+        files=$(find ./dist -type f \( -name "*.txt" -o -name "*.json" -o -name "*.md" -o -name "*.csv" \))
+        echo "files<<EOF" >> $GITHUB_ENV
+        echo "$files" >> $GITHUB_ENV
+        echo "EOF" >> $GITHUB_ENV
 
     - name: Create GitHub Release
       id: create_release
