@@ -31,12 +31,16 @@ export function generateTxt(data, suffix = "") {
 /**
  * Generate markdown data from input data.
  * @param {Array} data - Input data.
+ * @param {string} [suffix] - Optional suffix to append to each set. Default is an empty string.
  * @returns {string} - Formatted markdown data.
  */
-export function generateMd(data) {
+export function generateMd(data, suffix = "") {
   const title = "# संत कबीर दास जी के दोहे \n\n";
   const content = data
-    .map((set) => `**${set.join("\\\n")}**\n\n~ गुरु कबीर साहब`)
+    .map((set) => {
+      const formattedSet = `**${set.join("\\\n")}**`;
+      return suffix ? `${formattedSet}\n\n${suffix}` : formattedSet;
+    })
     .join("\n\n---\n\n");
   return title + content;
 }
@@ -75,7 +79,7 @@ export const generateData = async (builder, type) => {
     fileData = generateTxt(data, txtSuffix);
     break;
   case "md":
-    fileData = generateMd(data);
+    fileData = generateMd(data, txtSuffix);
     break;
   case "csv":
     fileData = await generateCSV(data);
