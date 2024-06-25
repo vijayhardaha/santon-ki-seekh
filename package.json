@@ -4,13 +4,21 @@
   "description": "आचार्य प्रशांत से मेरी आध्यात्मिक शिक्षाओं का संग्रह। इस रिपॉज़िटरी में कबीर के भजन और दोहे, आचार्य प्रशांत के उद्धरण, और आध्यात्मिकता में सहायक शब्दों और विषयों की परिभाषाएँ और मुख्य बिंदु शामिल हैं।",
   "main": "src/index.js",
   "scripts": {
+    "prebuild": "rm -rf dist",
     "build": "node src/index.js"
   },
   "keywords": [],
   "author": "Vijay Hardaha",
   "license": "MIT",
+  "type": "module",
   "devDependencies": {
     "eslint": "^8.57.0",
-    "eslint-config-google": "^0.14.0"
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.29.1"
+  },
+  "dependencies": {
+    "json-2-csv": "^5.5.1",
+    "ora": "^8.0.1"
   }
 }
