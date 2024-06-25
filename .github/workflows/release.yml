@@ -1,0 +1,54 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Get Tag
+      id: tag
+      run: echo "tag=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build the project
+      run: npm run build
+
+    - name: Zip the dist folder
+      run: zip -r dist.zip dist/
+
+    - name: Find files to upload
+      id: find_files
+      run: |
+        files=$(find . -type f \( -name "*.txt" -o -name "*.json" -o -name "*.md" -o -name "*.csv" \))
+        echo "files=$files" >> $GITHUB_ENV
+
+    - name: Create GitHub Release
+      id: create_release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: |
+          dist.zip
+          ${{ env.files }}
+        token: ${{ env.GITHUB_TOKEN }}
+        tag: ${{ github.ref }}
+        name: ${{ env.tag }}
+        draft: false
+        prerelease: false
