@@ -9,10 +9,23 @@
 
 ## सामग्री
 
-### कबीर के भजन और दोहे
+### भजन संग्रह
 
-- भजन 1
-- भजन 2
+- [भजन: राम भजा सो जीता जग में (कबीर साहब)](/docs/bhajans/ram-bhaja-so-jeeta-jag-me.md)
+- [भजन: तोहि मोहि लगन लगाय रे फकीरवा (कबीर साहब)](/docs/bhajans/tohi-mohi-lagan-lagaaye-re-phakirava.md)
+- [भजन: मन मस्त हुआ तब क्यों बोले (कबीर साहब)](/docs/bhajans/man-mast-huaa-tab-kyon-bole.md)
+- [भजन: तेरा मेरा मनुवा कैसे एक होई रे (कबीर साहब)](/docs/bhajans/tera-mera-manuva-kaise-ek-hoii-re.md)
+- [भजन: पिया मेरा जागे मैं कैसे सोई री (कबीर साहब)](/docs/bhajans/piya-mera-jaage-main-kaise-soii-ri.md)
+- [भजन: हमन है इश्क मस्ताना (कबीर साहब)](/docs/bhajans/haman-hai-ishq-mastaanaa.md)
+- [भजन: मोको कहां ढूँढ़े रे बन्दे (कबीर साहब)](/docs/bhajans/moko-kahaan-dhundhe-re-bande.md)
+- [भजन: राम निरंजन न्यारा रे (कबीर साहब)](/docs/bhajans/ram-niranjan-nyaara-re.md)
+- [भजन: राम बिन तन की ताप न जाई (कबीर साहब)](/docs/bhajans/ram-bin-tan-ki-taap-n-jaai.md)
+- [भजन: अमरपुर ले चलो सजना (कबीर साहब)](/docs/bhajans/amarapur-le-chalo-sajna.md)
+- [भजन: जो मैं बौरा तो राम तोरा (कबीर साहब)](/docs/bhajans/jo-main-bora-to-ram-tora.md)
+- [भजन: पानी में मीन पियासी (कबीर साहब)](/docs/bhajans/pani-men-menn-piyaasi.md)
+
+### दोहे संग्रह
+
 - दोहा 1
 - दोहा 2
 
