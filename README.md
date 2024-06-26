@@ -10,17 +10,17 @@
 
 ### भजन संग्रह (Prayer Collections)
 
-- [भजन: अमरपुर ले चलो सजना — (कबीर साहब)](/docs/bhajans/amarapur-le-chalo-sajna.md)
-- [भजन: हमन है इश्क मस्ताना — (कबीर साहब)](/docs/bhajans/haman-hai-ishq-mastaanaa.md)
+- [भजन: अमरपुर ले चलो सजना — (कबीर साहब)](/docs/bhajans/amarpur-le-chalo-sajna.md)
+- [भजन: हमन है इश्क मस्ताना — (कबीर साहब)](/docs/bhajans/haman-hai-ishq-mastana.md)
 - [भजन: जो मैं बौरा तो राम तोरा — (कबीर साहब)](/docs/bhajans/jo-main-bora-to-ram-tora.md)
 - [भजन: मन मस्त हुआ तब क्यों बोले — (कबीर साहब)](/docs/bhajans/man-mast-huaa-tab-kyon-bole.md)
 - [भजन: मोको कहां ढूँढ़े रे बन्दे — (कबीर साहब)](/docs/bhajans/moko-kahaan-dhundhe-re-bande.md)
-- [भजन: पानी में मीन पियासी — (कबीर साहब)](/docs/bhajans/pani-men-menn-piyaasi.md)
-- [भजन: पिया मेरा जागे मैं कैसे सोई री — (कबीर साहब)](/docs/bhajans/piya-mera-jaage-main-kaise-soii-ri.md)
+- [भजन: पानी में मीन पियासी — (कबीर साहब)](/docs/bhajans/pani-me-meen-piyaasi.md)
+- [भजन: पिया मेरा जागे मैं कैसे सोई री — (कबीर साहब)](/docs/bhajans/piya-mera-jaage-main-kaise-soi-ri.md)
 - [भजन: राम भजा सो जीता जग में — (कबीर साहब)](/docs/bhajans/ram-bhaja-so-jeeta-jag-me.md)
-- [भजन: राम बिन तन की ताप न जाई — (कबीर साहब)](/docs/bhajans/ram-bin-tan-ki-taap-n-jaai.md)
+- [भजन: राम बिन तन की ताप न जाई — (कबीर साहब)](/docs/bhajans/ram-bin-tan-ki-taap-na-jaai.md)
 - [भजन: राम निरंजन न्यारा रे — (कबीर साहब)](/docs/bhajans/ram-niranjan-nyaara-re.md)
-- [भजन: तेरा मेरा मनुआ कैसे एक होई रे — (कबीर साहब)](/docs/bhajans/tera-mera-manuva-kaise-ek-hoii-re.md)
+- [भजन: तेरा मेरा मनुआ कैसे एक होई रे — (कबीर साहब)](/docs/bhajans/tera-mera-manuva-kaise-ek-hoi-re.md)
 - [भजन: तोहि मोहि लगन लगाय रे फकीरवा — (कबीर साहब)](/docs/bhajans/tohi-mohi-lagan-lagaaye-re-phakirava.md)
 
 ### दोहे संग्रह (Couplet Collections)
