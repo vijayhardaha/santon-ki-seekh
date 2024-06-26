@@ -2,14 +2,13 @@
 
 यह रिपॉज़िटरी आचार्य प्रशांत, जो एक आध्यात्मिक गुरु, वेदांत मर्मज्ञ और दार्शनिक हैं वेदांत मर्मज्ञ हैं, जिन्होंने जनसामान्य में भगवद्गीता, उपनिषदों, ऋषियों की बोधवाणी को पुनर्जीवित किया है, से मेरी शिक्षाओं का संग्रह है। इस रिपॉज़िटरी में निम्नलिखित सामग्रियाँ शामिल होंगी:
 
-1. **अक्षर जानकारी**: इस रिपॉज़िटरी में विभिन्न प्रकार की अक्षर जानकारी संकलित की जाएगी।
-2. **कबीर के भजन और प्रसिद्ध दोहे**: कबीर के भजन और दोहों का संग्रह।
-3. **आचार्य प्रशांत के उद्धरण**: आचार्य प्रशांत के प्रेरणादायक और ज्ञानवर्धक उद्धरणों का संग्रह।
-4. **मुख्य बिंदु और परिभाषाएँ**: आध्यात्मिकता में सहायक कुछ शब्दों और विषयों की परिभाषाएँ और मुख्य बिंदु।
+1. **संतों के भजन(Prayers) और प्रसिद्ध दोहे(Couplets)**: संतों के भजन और दोहों का संग्रह।
+2. **आचार्य प्रशांत के उद्धरण(Quotes)**: आचार्य प्रशांत के प्रेरणादायक और ज्ञानवर्धक उद्धरणों का संग्रह।
+3. **मुख्य बिंदु(Keypoints) और परिभाषाएँ(Definations)**: आध्यात्मिकता में सहायक कुछ शब्दों और विषयों की परिभाषाएँ और मुख्य बिंदु।
 
 ## सामग्री
 
-### भजन संग्रह
+### भजन संग्रह (Prayer Collections)
 
 - [भजन: अमरपुर ले चलो सजना — (कबीर साहब)](/docs/bhajans/amarapur-le-chalo-sajna.md)
 - [भजन: हमन है इश्क मस्ताना — (कबीर साहब)](/docs/bhajans/haman-hai-ishq-mastaanaa.md)
@@ -24,7 +23,7 @@
 - [भजन: तेरा मेरा मनुआ कैसे एक होई रे — (कबीर साहब)](/docs/bhajans/tera-mera-manuva-kaise-ek-hoii-re.md)
 - [भजन: तोहि मोहि लगन लगाय रे फकीरवा — (कबीर साहब)](/docs/bhajans/tohi-mohi-lagan-lagaaye-re-phakirava.md)
 
-### दोहे संग्रह
+### दोहे संग्रह (Couplet Collections)
 
 - [दोहा: आग आंच सहना सुगम — (कबीर साहब)](docs/dohas/aag-aanch-sahanaa-sugam.md)
 - [दोहा: आपा मेटे हरि मिले — (कबीर साहब)](docs/dohas/aapa-mete-hari-mile.md)
@@ -58,22 +57,22 @@
 - [दोहा: सुख के संगी स्वारथी — (कबीर साहब)](docs/dohas/sukh-ke-sangi-svaarathi.md)
 - [दोहा: सुरति करो मेरे सांइया — (कबीर साहब)](docs/dohas/surati-karo-mere-saaniya.md)
 
-### आचार्य प्रशांत के उद्धरण
+### आचार्य प्रशांत के उद्धरण (Acharya Prashant's Quotes)
 
 - उद्धरण 1
 - उद्धरण 2
 - उद्धरण 3
 
-### मुख्य बिंदु और परिभाषाएँ
+### मुख्य बिंदु और परिभाषाएँ (Keypoints and Definations)
 
 - शब्द 1: परिभाषा और मुख्य बिंदु
 - शब्द 2: परिभाषा और मुख्य बिंदु
 
-## उपयोग
+## उपयोग (Usage)
 
 इस रिपॉज़िटरी का उपयोग करने के लिए, आप इन टेक्स्ट जानकारी का अध्ययन कर सकते हैं और अपनी आध्यात्मिक यात्रा में सहायक सिद्ध हो सकते हैं।
 
-### डाउनलोड करने योग्य संपत्तियाँ
+### डाउनलोड करने योग्य संपत्तियाँ (Downloadable Assets)
 
 नीचे डाउनलोड के लिए उपलब्ध संपत्तियाँ दी गई हैं, जिन्हें उनकी सामग्री और प्रारूप के आधार पर वर्गीकृत किया गया है।
 
@@ -84,7 +83,7 @@
 | Sant Kabir Ke Dohe      | [CSV](https://github.com/vijayhardaha/lessons-from-acharya-prashant/releases/download/v1.0.1/kabir-ke-dohe.csv), [JSON](https://github.com/vijayhardaha/lessons-from-acharya-prashant/releases/download/v1.0.1/kabir-ke-dohe.json), [MD](https://github.com/vijayhardaha/lessons-from-acharya-prashant/releases/download/v1.0.1/kabir-ke-dohe.md), [JSON(RAW)](https://github.com/vijayhardaha/lessons-from-acharya-prashant/releases/download/v1.0.1/kabir-ke-dohe.raw.json), [TXT](https://github.com/vijayhardaha/lessons-from-acharya-prashant/releases/download/v1.0.1/kabir-ke-dohe.txt)                                                   |
 | All-in-One Assets       | [ZIP](https://github.com/vijayhardaha/lessons-from-acharya-prashant/releases/download/v1.0.1/all-in-one-assets.zip)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
-## आचार्य प्रशांत के बारे में अधिक जानकारी
+## आचार्य प्रशांत के बारे में अधिक जानकारी (More about Acharya Prashant)
 
 अध्यात्म की दृष्टि कहेगी कि आचार्य प्रशांत वेदांत मर्मज्ञ हैं, जिन्होंने जनसामान्य में भगवद्गीता, उपनिषदों, ऋषियों की बोधवाणी को पुनर्जीवित किया है। उनकी वाणी में आकाश मुखरित होता है।
 
@@ -98,11 +97,11 @@
 - [Hiring](https://acharyaprashant.org/en/hiring?cmId=m00075)
 - [Contribute](https://acharyaprashant.org/hi/contribute/contribute-work?cmId=m00075)
 
-## योगदान
+## योगदान (Contribution)
 
 यदि आप इस रिपॉज़िटरी में कोई नया भजन, दोहा, उद्धरण, या परिभाषा जोड़ना चाहते हैं, तो कृपया एक पुल रिक्वेस्ट सबमिट करें। आपका योगदान स्वागत योग्य है!
 
-## लाइसेंस
+## लाइसेंस (Lincese)
 
 यह परियोजना MIT लाइसेंस के तहत लाइसेंस प्राप्त है - अधिक जानकारी के लिए [LICENSE](LICENSE) फ़ाइल देखें।
 
