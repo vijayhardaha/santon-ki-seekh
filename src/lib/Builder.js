@@ -1,7 +1,7 @@
 /**
  * Import necessary packages and functions.
  */
-import { generateData } from "./helpers/dataGenerator.js";
+import { generateData, sortData } from "./helpers/dataGenerator.js";
 import { joinPath, makeDir } from "./helpers/fileSystemUtils.js";
 
 /**
@@ -13,14 +13,12 @@ const Builder = {
    * @async
    */
   run: async ({
-    id, fileName, txtSuffix, mdTitle, data,
+    fileName, mdTitle, data,
   }) => {
-    Builder.id = id;
     Builder.fileName = fileName;
-    Builder.txtSuffix = txtSuffix;
     Builder.mdTitle = mdTitle;
     Builder.outputDirName = "dist";
-    Builder.data = data;
+    Builder.data = sortData(data);
     Builder.outputDir = joinPath(process.cwd(), Builder.outputDirName);
 
     // Ensure the output directory exists
