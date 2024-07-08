@@ -5,7 +5,7 @@ import ora from "ora";
 
 import Builder from "./lib/Builder.js";
 import BhajanMeta from "./lib/data/bhajansData.js";
-import DohaMeta from "./lib/data/dohasData.js";
+import fetchDoheData from "./lib/data/dohasData.js";
 import QuoteMeta from "./lib/data/quotesData.js";
 
 /**
@@ -16,19 +16,20 @@ import QuoteMeta from "./lib/data/quotesData.js";
 
   try {
     // Execute Bhajan build process
-    spinner.text = "Executing Bhajan build process...";
+    spinner.start("Executing Bhajans build process..."); // Start a new spinner
     await Builder.run(BhajanMeta);
-    spinner.succeed("Bhajan build process executed successfully!");
+    spinner.succeed("Bhajans build process executed successfully!");
 
     // Execute Doha build process
-    spinner.text = "Executing Doha build process...";
-    await Builder.run(DohaMeta);
-    spinner.succeed("Doha build process executed successfully!");
+    spinner.start("Executing Dohe build process..."); // Start a new spinner
+    const DoheMeta = await fetchDoheData();
+    await Builder.run(DoheMeta);
+    spinner.succeed("Dohe build process executed successfully!");
 
     // Execute Quote build process
-    spinner.text = "Executing Quote build process...";
+    spinner.start("Executing Quotes build process..."); // Start another new spinner
     await Builder.run(QuoteMeta);
-    spinner.succeed("Quote build process executed successfully!");
+    spinner.succeed("Quotes build process executed successfully!");
 
     // Resolve the promise at the end.
     Promise.resolve();
