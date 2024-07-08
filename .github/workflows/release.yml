@@ -26,18 +26,21 @@ jobs:
         node-version: '20'
 
     - name: Install dependencies
-      run: npm install
+      run: npm install --prefix src
 
     - name: Build the project
-      run: npm run build
+      run: npm run build --prefix src
 
-    - name: Zip the dist folder
-      run: zip -r all-in-one-assets.zip dist/
+    - name: Rename dist folder to all-in-one-assets
+      run: mv src/dist all-in-one-assets
+
+    - name: Zip the all-in-one-assets folder
+      run: zip -r all-in-one-assets.zip all-in-one-assets/
 
     - name: Find files to upload
       id: find_files
       run: |
-        files=$(find ./dist -type f \( -name "*.txt" -o -name "*.json" -o -name "*.md" -o -name "*.csv" \))
+        files=$(find ./all-in-one-assets -type f \( -name "*.txt" -o -name "*.json" -o -name "*.md" -o -name "*.csv" \))
         echo "files<<EOF" >> $GITHUB_ENV
         echo "$files" >> $GITHUB_ENV
         echo "EOF" >> $GITHUB_ENV
@@ -54,3 +57,4 @@ jobs:
         name: ${{ env.tag }}
         draft: false
         prerelease: false
+        makeLatest: true
