@@ -132,3 +132,6 @@ dist
 # Operating System files.
 .DS_Store
 Thumbs.db
+
+# Local Netlify folder
+.netlify
