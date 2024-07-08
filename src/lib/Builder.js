@@ -1,7 +1,7 @@
 /**
  * Import necessary packages and functions.
  */
-import {generateData, sortData} from "./helpers/dataGenerator.js";
+import {generateData} from "./helpers/dataGenerator.js";
 import {joinPath, makeDir} from "./helpers/fileSystemUtils.js";
 
 /**
@@ -18,7 +18,7 @@ const Builder = {
     Builder.fileName = fileName;
     Builder.mdTitle = mdTitle;
     Builder.outputDirName = "dist";
-    Builder.data = sortData(data);
+    Builder.data = data;
     Builder.outputDir = joinPath(process.cwd(), Builder.outputDirName);
 
     // Ensure the output directory exists
