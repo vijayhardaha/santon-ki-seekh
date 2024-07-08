@@ -1,8 +1,8 @@
 /**
  * Import necessary packages and functions.
  */
-import { generateData, sortData } from "./helpers/dataGenerator.js";
-import { joinPath, makeDir } from "./helpers/fileSystemUtils.js";
+import {generateData, sortData} from "./helpers/dataGenerator.js";
+import {joinPath, makeDir} from "./helpers/fileSystemUtils.js";
 
 /**
  * Builder module definition
@@ -34,31 +34,31 @@ const Builder = {
 
   /**
    * Build raw JSON data
-   * @returns {Promise<void>}
+   * @return {Promise<void>}
    */
   buildRawJson: async () => generateData(Builder, "raw.json"),
 
   /**
    * Build formatted JSON data
-   * @returns {Promise<void>}
+   * @return {Promise<void>}
    */
   buildJson: async () => generateData(Builder, "json"),
 
   /**
    * Build text file
-   * @returns {Promise<void>}
+   * @return {Promise<void>}
    */
   buildTxt: async () => generateData(Builder, "txt"),
 
   /**
    * Build markdown file
-   * @returns {Promise<void>}
+   * @return {Promise<void>}
    */
   buildMd: async () => generateData(Builder, "md"),
 
   /**
    * Build CSV file
-   * @returns {Promise<void>}
+   * @return {Promise<void>}
    */
   buildCsv: async () => generateData(Builder, "csv"),
 };

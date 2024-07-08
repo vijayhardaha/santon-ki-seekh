@@ -1,4 +1,4 @@
-import { GURU_KABIR } from "../helpers/constants.js";
+import {GURU_KABIR} from "../helpers/constants.js";
 
 const dataSet = [
   {

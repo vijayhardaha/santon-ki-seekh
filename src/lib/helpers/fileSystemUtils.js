@@ -1,14 +1,14 @@
 /**
  * Import packages.
  */
-import { promises as fs, constants } from "fs";
+import {promises as fs, constants} from "fs";
 import path from "path";
 
 /**
  * Get the file extension from the file path.
  *
  * @param {String} filePath - Local file path.
- * @returns {String} - The file extension.
+ * @return {String} - The file extension.
  */
 export const getFileExtension = (filePath) => path.extname(filePath);
 
@@ -17,7 +17,7 @@ export const getFileExtension = (filePath) => path.extname(filePath);
  *
  * @param {String} filePath - Local file path.
  * @param {Bool} removeExt - Remove extension from file basename if true. (Default: false)
- * @returns {String} - The file basename.
+ * @return {String} - The file basename.
  */
 export const getFileName = (filePath, removeExt = false) => {
   const ext = removeExt ? getFileExtension(filePath) : "";
@@ -28,7 +28,7 @@ export const getFileName = (filePath, removeExt = false) => {
  * Resolve the path.
  *
  * @param {String} pathSegments - Local file paths.
- * @returns {String} - The resolved path.
+ * @return {String} - The resolved path.
  */
 export const resolvePath = (...pathSegments) => path.resolve(...pathSegments);
 
@@ -36,7 +36,7 @@ export const resolvePath = (...pathSegments) => path.resolve(...pathSegments);
  * Join the path.
  *
  * @param {String} pathSegments - Local file paths.
- * @returns {String} - The joined path.
+ * @return {String} - The joined path.
  */
 export const joinPath = (...pathSegments) => path.join(...pathSegments);
 
@@ -48,7 +48,7 @@ export const joinPath = (...pathSegments) => path.join(...pathSegments);
  * error code results in an error being thrown.
  *
  * @param {String} filePath - Local file or directory path.
- * @returns {Bool} - True if it exists; otherwise, false.
+ * @return {Bool} - True if it exists; otherwise, false.
  */
 export async function isExists(filePath) {
   const checkPermissions = async (checkPath, flags) => {
@@ -77,7 +77,7 @@ export async function isExists(filePath) {
  * @param {String} dirPath - Directory path.
  */
 export async function makeDir(dirPath) {
-  await fs.mkdir(dirPath, { recursive: true });
+  await fs.mkdir(dirPath, {recursive: true});
 }
 
 /**
