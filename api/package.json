@@ -1,0 +1,14 @@
+{
+  "name": "santo-ki-seekh",
+  "version": "1.0.0",
+  "description": "API for Santo ki Seekh, providing access to bhajans and dohas in various formats.",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "csvtojson": "^2.0.10",
+    "express": "^4.19.2",
+    "serverless-http": "^3.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
