@@ -55,7 +55,43 @@
 
 ### दोहे संग्रह (Couplet Collections)
 
-- [संत कबीर के दोहे संग्रह — 01](docs/dohas/sant-kabir-ke-dohe-01.md)
+- [संत कबीर के दोहे संग्रह — 01 to 50][sant-kabir-ke-dohe-01]
+- [संत कबीर के दोहे संग्रह — 51 to 100][sant-kabir-ke-dohe-02]
+- [संत कबीर के दोहे संग्रह — 101 to 150][sant-kabir-ke-dohe-03]
+- [संत कबीर के दोहे संग्रह — 151 to 200][sant-kabir-ke-dohe-04]
+- [संत कबीर के दोहे संग्रह — 201 to 250][sant-kabir-ke-dohe-05]
+- [संत कबीर के दोहे संग्रह — 251 to 300][sant-kabir-ke-dohe-06]
+- [संत कबीर के दोहे संग्रह — 301 to 350][sant-kabir-ke-dohe-07]
+- [संत कबीर के दोहे संग्रह — 351 to 400][sant-kabir-ke-dohe-08]
+- [संत कबीर के दोहे संग्रह — 401 to 450][sant-kabir-ke-dohe-09]
+- [संत कबीर के दोहे संग्रह — 451 to 500][sant-kabir-ke-dohe-10]
+- [संत कबीर के दोहे संग्रह — 501 to 550][sant-kabir-ke-dohe-11]
+- [संत कबीर के दोहे संग्रह — 551 to 600][sant-kabir-ke-dohe-12]
+- [संत कबीर के दोहे संग्रह — 601 to 650][sant-kabir-ke-dohe-13]
+- [संत कबीर के दोहे संग्रह — 651 to 700][sant-kabir-ke-dohe-14]
+- [संत कबीर के दोहे संग्रह — 701 to 750][sant-kabir-ke-dohe-15]
+- [संत कबीर के दोहे संग्रह — 751 to 800][sant-kabir-ke-dohe-16]
+- [संत कबीर के दोहे संग्रह — 801 to 850][sant-kabir-ke-dohe-17]
+- [संत कबीर के दोहे संग्रह — 851 to 900][sant-kabir-ke-dohe-18]
+
+[sant-kabir-ke-dohe-01]: docs/dohe/sant-kabir-ke-dohe-01.md
+[sant-kabir-ke-dohe-02]: docs/dohe/sant-kabir-ke-dohe-02.md
+[sant-kabir-ke-dohe-03]: docs/dohe/sant-kabir-ke-dohe-03.md
+[sant-kabir-ke-dohe-04]: docs/dohe/sant-kabir-ke-dohe-04.md
+[sant-kabir-ke-dohe-05]: docs/dohe/sant-kabir-ke-dohe-05.md
+[sant-kabir-ke-dohe-06]: docs/dohe/sant-kabir-ke-dohe-06.md
+[sant-kabir-ke-dohe-07]: docs/dohe/sant-kabir-ke-dohe-07.md
+[sant-kabir-ke-dohe-08]: docs/dohe/sant-kabir-ke-dohe-08.md
+[sant-kabir-ke-dohe-09]: docs/dohe/sant-kabir-ke-dohe-09.md
+[sant-kabir-ke-dohe-10]: docs/dohe/sant-kabir-ke-dohe-10.md
+[sant-kabir-ke-dohe-11]: docs/dohe/sant-kabir-ke-dohe-11.md
+[sant-kabir-ke-dohe-12]: docs/dohe/sant-kabir-ke-dohe-12.md
+[sant-kabir-ke-dohe-13]: docs/dohe/sant-kabir-ke-dohe-13.md
+[sant-kabir-ke-dohe-14]: docs/dohe/sant-kabir-ke-dohe-14.md
+[sant-kabir-ke-dohe-15]: docs/dohe/sant-kabir-ke-dohe-15.md
+[sant-kabir-ke-dohe-16]: docs/dohe/sant-kabir-ke-dohe-16.md
+[sant-kabir-ke-dohe-17]: docs/dohe/sant-kabir-ke-dohe-17.md
+[sant-kabir-ke-dohe-18]: docs/dohe/sant-kabir-ke-dohe-18.md
 
 ## उपयोग (Usage)
 
