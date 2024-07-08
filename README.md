@@ -9,39 +9,53 @@
 
 ### भजन संग्रह (Prayer Collections)
 
-|                                                                                          |                                                                                                    |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| [अब से खबरदार रहो भाई — (कबीर साहब)](docs/bhajans/ab-se-khabardaar-raho-bhai.md)         | [पानी में मीन पियासी — (कबीर साहब)](/docs/bhajans/pani-me-meen-piyaasi.md)                         |
-| [अमरपुर ले चलो सजना — (कबीर साहब)](/docs/bhajans/amarpur-le-chalo-sajna.md)              | [पीले प्याला हो मतवाला — (कबीर साहब)](docs/bhajans/peele-pyala-ho-matwala.md)                      |
-| [चलना है दूर मुसाफ़िर — (कबीर साहब)](docs/bhajans/chalna-hai-door-musafir.md)            | [पिया मेरा जागे मैं कैसे सोई री — (कबीर साहब)](/docs/bhajans/piya-mera-jaage-main-kaise-soi-ri.md) |
-| [घूँघट के पट खोल रे — (कबीर साहब)](docs/bhajans/ghoonghat-ke-pat-khol-re.md)             | [रैन दिवस पिय संग रहत है — (कबीर साहब)](docs/bhajans/rain-divas-piya-sang-rahat-hai.md)            |
-| [हमन है इश्क मस्ताना — (कबीर साहब)](/docs/bhajans/haman-hai-ishq-mastana.md)             | [राम भजा सो जीता जग में — (कबीर साहब)](/docs/bhajans/ram-bhaja-so-jeeta-jag-me.md)                 |
-| [जागु पियारी अब का सोवै — (कबीर साहब)](docs/bhajans/jaag-piyari-ab-ka-sauve.md)          | [राम बिन तन की ताप न जाई — (कबीर साहब)](/docs/bhajans/ram-bin-tan-ki-taap-na-jaai.md)              |
-| [जो मैं बौरा तो राम तोरा — (कबीर साहब)](/docs/bhajans/jo-main-bora-to-ram-tora.md)       | [राम निरंजन न्यारा रे — (कबीर साहब)](/docs/bhajans/ram-niranjan-nyaara-re.md)                      |
-| [मन लागो यार फकीरी में — (कबीर साहब)](docs/bhajans/man-lago-yaar-fakiri-me.md)           | [रहना नहिं देस बिराना है — (कबीर साहब)](docs/bhajans/rehna-nahi-desh-virana-hai.md)                |
-| [मन मस्त हुआ तब क्यों बोले — (कबीर साहब)](/docs/bhajans/man-mast-huaa-tab-kyon-bole.md)  | [तेरा मेरा मनुआ कैसे एक होई रे — (कबीर साहब)](/docs/bhajans/tera-mera-manuva-kaise-ek-hoi-re.md)   |
-| [मोको कहां ढूँढ़े रे बन्दे — (कबीर साहब)](/docs/bhajans/moko-kahaan-dhundhe-re-bande.md) | [तोहि मोहि लगन लगाय रे फकीरवा — (कबीर साहब)](/docs/bhajans/tohi-mohi-lagan-lagaye-re-phakirava.md) |
+## Bhajans
+
+- [अब से खबरदार रहो भाई — (कबीर साहब)][ab-se-khabardaar-raho-bhai]
+- [अमरपुर ले चलो सजना — (कबीर साहब)][amarpur-le-chalo-sajna]
+- [घूँघट के पट खोल रे — (कबीर साहब)][ghoonghat-ke-pat-khol-re]
+- [चलना है दूर मुसाफ़िर — (कबीर साहब)][chalna-hai-door-musafir]
+- [जागु पियारी अब का सोवै — (कबीर साहब)][jaag-piyari-ab-ka-sauve]
+- [जो मैं बौरा तो राम तोरा — (कबीर साहब)][jo-main-bora-to-ram-tora]
+- [तेरा मेरा मनुआ कैसे एक होई रे — (कबीर साहब)][tera-mera-manuva-kaise-ek-hoi-re]
+- [तोहि मोहि लगन लगाय रे फकीरवा — (कबीर साहब)][tohi-mohi-lagan-lagaye-re-phakirava]
+- [पानी में मीन पियासी — (कबीर साहब)][pani-me-meen-piyaasi]
+- [पिया मेरा जागे मैं कैसे सोई री — (कबीर साहब)][piya-mera-jaage-main-kaise-soi-ri]
+- [पीले प्याला हो मतवाला — (कबीर साहब)][peele-pyala-ho-matwala]
+- [मन मस्त हुआ तब क्यों बोले — (कबीर साहब)][man-mast-huaa-tab-kyon-bole]
+- [मन लागो यार फकीरी में — (कबीर साहब)][man-lago-yaar-fakiri-me]
+- [मोको कहां ढूँढ़े रे बन्दे — (कबीर साहब)][moko-kahaan-dhundhe-re-bande]
+- [रहना नहिं देस बिराना है — (कबीर साहब)][rehna-nahi-desh-virana-hai]
+- [राम निरंजन न्यारा रे — (कबीर साहब)][ram-niranjan-nyaara-re]
+- [राम बिन तन की ताप न जाई — (कबीर साहब)][ram-bin-tan-ki-taap-na-jaai]
+- [राम भजा सो जीता जग में — (कबीर साहब)][ram-bhaja-so-jeeta-jag-me]
+- [रैन दिवस पिय संग रहत है — (कबीर साहब)][rain-divas-piya-sang-rahat-hai]
+- [हमन है इश्क मस्ताना — (कबीर साहब)][haman-hai-ishq-mastana]
+
+[ab-se-khabardaar-raho-bhai]: docs/bhajans/ab-se-khabardaar-raho-bhai.md
+[pani-me-meen-piyaasi]: /docs/bhajans/pani-me-meen-piyaasi.md
+[amarpur-le-chalo-sajna]: /docs/bhajans/amarpur-le-chalo-sajna.md
+[peele-pyala-ho-matwala]: docs/bhajans/peele-pyala-ho-matwala.md
+[chalna-hai-door-musafir]: docs/bhajans/chalna-hai-door-musafir.md
+[piya-mera-jaage-main-kaise-soi-ri]: /docs/bhajans/piya-mera-jaage-main-kaise-soi-ri.md
+[ghoonghat-ke-pat-khol-re]: docs/bhajans/ghoonghat-ke-pat-khol-re.md
+[rain-divas-piya-sang-rahat-hai]: docs/bhajans/rain-divas-piya-sang-rahat-hai.md
+[haman-hai-ishq-mastana]: /docs/bhajans/haman-hai-ishq-mastana.md
+[ram-bhaja-so-jeeta-jag-me]: /docs/bhajans/ram-bhaja-so-jeeta-jag-me.md
+[jaag-piyari-ab-ka-sauve]: docs/bhajans/jaag-piyari-ab-ka-sauve.md
+[ram-bin-tan-ki-taap-na-jaai]: /docs/bhajans/ram-bin-tan-ki-taap-na-jaai.md
+[jo-main-bora-to-ram-tora]: /docs/bhajans/jo-main-bora-to-ram-tora.md
+[ram-niranjan-nyaara-re]: /docs/bhajans/ram-niranjan-nyaara-re.md
+[man-lago-yaar-fakiri-me]: docs/bhajans/man-lago-yaar-fakiri-me.md
+[rehna-nahi-desh-virana-hai]: docs/bhajans/rehna-nahi-desh-virana-hai.md
+[man-mast-huaa-tab-kyon-bole]: /docs/bhajans/man-mast-huaa-tab-kyon-bole.md
+[tera-mera-manuva-kaise-ek-hoi-re]: /docs/bhajans/tera-mera-manuva-kaise-ek-hoi-re.md
+[moko-kahaan-dhundhe-re-bande]: /docs/bhajans/moko-kahaan-dhundhe-re-bande.md
+[tohi-mohi-lagan-lagaye-re-phakirava]: /docs/bhajans/tohi-mohi-lagan-lagaye-re-phakirava.md
 
 ### दोहे संग्रह (Couplet Collections)
 
 - [संत कबीर के दोहे संग्रह — 01](docs/dohas/sant-kabir-ke-dohe-01.md)
-
-  |                            |                               |                           |
-  | -------------------------- | ----------------------------- | ------------------------- |
-  | 1. आग आंच सहना सुगम        | 11. जल में बसे कुमुदनी        | 21. मोटी माया सब तजै      |
-  | 2. आपा मेटे हरि मिले       | 12. जिहि घट प्रीति न प्रेम रस | 22. प्रीति बहुत संसार में |
-  | 3. बहता पानी निर्मला       | 13. कबीरा रेख सिंदूर की       | 23. प्रेम पियाला जो पिये  |
-  | 4. भीतर तो भेदा नहीं       | 14. कबीरा यह संसार है         | 24. राम बुलावा भेजिया     |
-  | 5. बुरा जो देखन मैं चला    | 15. मनुवा तो पंछी भया         | 25. राम नाम कड़वा लगे     |
-  | 6. दौड़त दौड़त दौड़िया     | 16. मरण भला तब जानिए          | 26. साधो रण में मिट रहा   |
-  | 7. दुर्लभ मानुष जन्म है    | 17. माया छोड़न सब कहे         | 27. साधु ऐसा चाहिए        |
-  | 8. गगन दमामा बाजिया        | 18. माया दोय प्रकार की        | 28. सोना सज्जन साधुजन     |
-  | 9. ज्ञानी भूले ज्ञान कथि   | 19. माया मन की मोहिनी         | 29. सूरा सोई सराहिये      |
-  | 10. जहाँ काम तहाँ नाम नहीं | 20. माया तो ठगनी भई           | 30. सुख के संगी स्वारथी   |
-
-  |                           |     |     |
-  | ------------------------- | --- | --- |
-  | 31. सुरति करो मेरे सांइया |     |     |
 
 ## उपयोग (Usage)
 
@@ -51,12 +65,29 @@
 
 नीचे डाउनलोड के लिए उपलब्ध संपत्तियाँ दी गई हैं, जिन्हें उनकी सामग्री और प्रारूप के आधार पर वर्गीकृत किया गया है।
 
-| Label                   | Download Links                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Acharya Prashant Quotes | [CSV](https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.3/acharya-prashant-quotes.csv), [JSON](https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.3/acharya-prashant-quotes.json), [MD](https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.3/acharya-prashant-quotes.md), [JSON(RAW)](https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.3/acharya-prashant-quotes.raw.json), [TXT](https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.3/acharya-prashant-quotes.txt) |
-| Santo Ke Bhajan         | [CSV](https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.3/santon-ke-bhajan.csv), [JSON](https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.3/santon-ke-bhajan.json), [MD](https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.3/santon-ke-bhajan.md), [JSON(RAW)](https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.3/santon-ke-bhajan.raw.json), [TXT](https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.3/santon-ke-bhajan.txt)                                    |
-| Santo Ke Dohe           | [CSV](https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.3/santon-ke-dohe.csv), [JSON](https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.3/santon-ke-dohe.json), [MD](https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.3/santon-ke-dohe.md), [JSON(RAW)](https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.3/santon-ke-dohe.raw.json), [TXT](https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.3/santon-ke-dohe.txt)                                              |
-| All-in-One Assets       | [ZIP](https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.3/all-in-one-assets.zip)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Label                   | Download Links                                                                                                |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Acharya Prashant Quotes | [CSV][acharya-csv], [JSON][acharya-json], [MD][acharya-md], [JSON(RAW)][acharya-json-raw], [TXT][acharya-txt] |
+| Santo Ke Bhajan         | [CSV][bhajan-csv], [JSON][bhajan-json], [MD][bhajan-md], [JSON(RAW)][bhajan-json-raw], [TXT][bhajan-txt]      |
+| Santo Ke Dohe           | [CSV][dohe-csv], [JSON][dohe-json], [MD][dohe-md], [JSON(RAW)][dohe-json-raw], [TXT][dohe-txt]                |
+| All-in-One Assets       | [ZIP][all-in-one]                                                                                             |
+
+[acharya-csv]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.4/acharya-prashant-quotes.csv
+[acharya-json]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.4/acharya-prashant-quotes.json
+[acharya-md]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.4/acharya-prashant-quotes.md
+[acharya-json-raw]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.4/acharya-prashant-quotes.raw.json
+[acharya-txt]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.4/acharya-prashant-quotes.txt
+[bhajan-csv]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.4/santon-ke-bhajan.csv
+[bhajan-json]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.4/santon-ke-bhajan.json
+[bhajan-md]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.4/santon-ke-bhajan.md
+[bhajan-json-raw]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.4/santon-ke-bhajan.raw.json
+[bhajan-txt]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.4/santon-ke-bhajan.txt
+[dohe-csv]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.4/santon-ke-dohe.csv
+[dohe-json]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.4/santon-ke-dohe.json
+[dohe-md]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.4/santon-ke-dohe.md
+[dohe-json-raw]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.4/santon-ke-dohe.raw.json
+[dohe-txt]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.4/santon-ke-dohe.txt
+[all-in-one]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.4/all-in-one-assets.zip
 
 ## योगदान (Contribution)
 
