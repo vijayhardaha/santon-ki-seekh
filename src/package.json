@@ -19,7 +19,6 @@
     "globals": "^15.8.0"
   },
   "dependencies": {
-    "json-2-csv": "^5.5.1",
     "ora": "^8.0.1"
   }
 }
