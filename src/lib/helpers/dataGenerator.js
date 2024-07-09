@@ -4,6 +4,7 @@
 import {json2csv} from "json-2-csv";
 import {joinPath, writeFile} from "./fileSystemUtils.js";
 import {AUTHOR_PREFIX} from "./constants.js";
+import * as prettier from "prettier";
 
 /**
  * Generates a suffix string with the author information if available.
@@ -95,6 +96,7 @@ export const generateData = async (builder, type) => {
     break;
   case "md":
     fileData = generateMd(data, mdTitle);
+    fileData = await prettier.format(`${fileData}`, {parser: "markdown"});
     break;
   case "csv":
     fileData = await generateCSV(data);
