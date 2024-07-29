@@ -1,11 +1,11 @@
-## संतों की सीख (Santon ki Seekh)
+# संतों की सीख (Santon ki Seekh)
 
-इस रिपॉज़िटरी में निम्नलिखित सामग्रियाँ शामिल होंगी, ये सारे भजन और दोहे मैंने [आचार्य प्रशांत](https://acharyaprashant.org/en/gita) के माध्यम से सीखे और समझे हैं:
+This repository will include the following materials, all of which I have learned and understood through [Acharya Prashant](https://acharyaprashant.org/en/gita):
 
 - **भजन (Prayers)**: विभिन्न संतों के भजन जो आध्यात्मिकता और भक्ति की ओर प्रेरित करते हैं।
 - **प्रसिद्ध दोहे (Famous Couplets)**: संतों द्वारा रचित प्रसिद्ध दोहे और उनके जीवन के संदेश।
 
-### भजन संग्रह (Prayer Collections)
+## भजन संग्रह (Prayer Collections)
 
 - [अब से खबरदार रहो भाई — (कबीर साहब)][ab-se-khabardaar-raho-bhai]
 - [अमरपुर ले चलो सजना — (कबीर साहब)][amarpur-le-chalo-sajna]
@@ -29,27 +29,27 @@
 - [हमन है इश्क मस्ताना — (कबीर साहब)][haman-hai-ishq-mastana]
 
 [ab-se-khabardaar-raho-bhai]: docs/bhajans/ab-se-khabardaar-raho-bhai.md
-[pani-me-meen-piyaasi]: /docs/bhajans/pani-me-meen-piyaasi.md
-[amarpur-le-chalo-sajna]: /docs/bhajans/amarpur-le-chalo-sajna.md
+[pani-me-meen-piyaasi]: docs/bhajans/pani-me-meen-piyaasi.md
+[amarpur-le-chalo-sajna]: docs/bhajans/amarpur-le-chalo-sajna.md
 [peele-pyala-ho-matwala]: docs/bhajans/peele-pyala-ho-matwala.md
 [chalna-hai-door-musafir]: docs/bhajans/chalna-hai-door-musafir.md
-[piya-mera-jaage-main-kaise-soi-ri]: /docs/bhajans/piya-mera-jaage-main-kaise-soi-ri.md
+[piya-mera-jaage-main-kaise-soi-ri]: docs/bhajans/piya-mera-jaage-main-kaise-soi-ri.md
 [ghoonghat-ke-pat-khol-re]: docs/bhajans/ghoonghat-ke-pat-khol-re.md
 [rain-divas-piya-sang-rahat-hai]: docs/bhajans/rain-divas-piya-sang-rahat-hai.md
-[haman-hai-ishq-mastana]: /docs/bhajans/haman-hai-ishq-mastana.md
-[ram-bhaja-so-jeeta-jag-me]: /docs/bhajans/ram-bhaja-so-jeeta-jag-me.md
+[haman-hai-ishq-mastana]: docs/bhajans/haman-hai-ishq-mastana.md
+[ram-bhaja-so-jeeta-jag-me]: docs/bhajans/ram-bhaja-so-jeeta-jag-me.md
 [jaag-piyari-ab-ka-sauve]: docs/bhajans/jaag-piyari-ab-ka-sauve.md
-[ram-bin-tan-ki-taap-na-jaai]: /docs/bhajans/ram-bin-tan-ki-taap-na-jaai.md
-[jo-main-bora-to-ram-tora]: /docs/bhajans/jo-main-bora-to-ram-tora.md
-[ram-niranjan-nyaara-re]: /docs/bhajans/ram-niranjan-nyaara-re.md
+[ram-bin-tan-ki-taap-na-jaai]: docs/bhajans/ram-bin-tan-ki-taap-na-jaai.md
+[jo-main-bora-to-ram-tora]: docs/bhajans/jo-main-bora-to-ram-tora.md
+[ram-niranjan-nyaara-re]: docs/bhajans/ram-niranjan-nyaara-re.md
 [man-lago-yaar-fakiri-me]: docs/bhajans/man-lago-yaar-fakiri-me.md
 [rehna-nahi-desh-virana-hai]: docs/bhajans/rehna-nahi-desh-virana-hai.md
-[man-mast-huaa-tab-kyon-bole]: /docs/bhajans/man-mast-huaa-tab-kyon-bole.md
-[tera-mera-manuva-kaise-ek-hoi-re]: /docs/bhajans/tera-mera-manuva-kaise-ek-hoi-re.md
-[moko-kahaan-dhundhe-re-bande]: /docs/bhajans/moko-kahaan-dhundhe-re-bande.md
-[tohi-mohi-lagan-lagaye-re-phakirava]: /docs/bhajans/tohi-mohi-lagan-lagaye-re-phakirava.md
+[man-mast-huaa-tab-kyon-bole]: docs/bhajans/man-mast-huaa-tab-kyon-bole.md
+[tera-mera-manuva-kaise-ek-hoi-re]: docs/bhajans/tera-mera-manuva-kaise-ek-hoi-re.md
+[moko-kahaan-dhundhe-re-bande]: docs/bhajans/moko-kahaan-dhundhe-re-bande.md
+[tohi-mohi-lagan-lagaye-re-phakirava]: docs/bhajans/tohi-mohi-lagan-lagaye-re-phakirava.md
 
-### दोहे संग्रह (Couplet Collections)
+## दोहे संग्रह (Couplet Collections)
 
 - [संत कबीर के दोहे संग्रह — 01 to 50][sant-kabir-ke-dohe-01]
 - [संत कबीर के दोहे संग्रह — 51 to 100][sant-kabir-ke-dohe-02]
@@ -89,13 +89,13 @@
 [sant-kabir-ke-dohe-17]: docs/dohe/sant-kabir-ke-dohe-17.md
 [sant-kabir-ke-dohe-18]: docs/dohe/sant-kabir-ke-dohe-18.md
 
-## उपयोग (Usage)
+## Usage
 
-इस रिपॉज़िटरी का उपयोग करने के लिए, आप इन टेक्स्ट जानकारी का अध्ययन कर सकते हैं और अपनी आध्यात्मिक यात्रा में सहायक सिद्ध हो सकते हैं।
+To use this repository, you can study these textual materials and find them helpful in your spiritual journey.
 
-### डाउनलोड करने योग्य संपत्तियाँ (Downloadable Assets)
+## Downloadable Assets
 
-नीचे डाउनलोड के लिए उपलब्ध संपत्तियाँ दी गई हैं, जिन्हें उनकी सामग्री और प्रारूप के आधार पर वर्गीकृत किया गया है।
+Below are the assets available for download, categorized based on their content and format.
 
 | Label                   | Download Links                                                                                                |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------- |
@@ -121,10 +121,10 @@
 [dohe-txt]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.5/santon-ke-dohe.txt
 [all-in-one]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.5/all-in-one-assets.zip
 
-## योगदान (Contribution)
+## Contribution
 
-यदि आप इस रिपॉज़िटरी में कोई नया भजन, दोहा, उद्धरण, या परिभाषा जोड़ना चाहते हैं, तो कृपया एक पुल रिक्वेस्ट सबमिट करें। आपका योगदान स्वागत योग्य है!
+If you wish to add a new bhajan, doha, quote, or definition to this repository, please submit a pull request. Your contribution is welcome!
 
-## लाइसेंस (Lincese)
+## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
