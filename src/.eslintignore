@@ -1,0 +1,25 @@
+# Node.js
+node_modules/
+build/
+dist/
+coverage/
+
+# Environment files
+.env
+.env.local
+
+# Logs
+*.log
+
+# Dependency directories
+bower_components/
+
+# Compiled output
+*.tsbuildinfo
+
+# Ignore test files
+test/**/*.js
+spec/**/*.js
+
+# Ignore other generated files
+*.generated.js
