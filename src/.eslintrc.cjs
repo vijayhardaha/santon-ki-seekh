@@ -1,29 +1,35 @@
+// .eslintrc.js
 module.exports = {
-  env: {
-    es6: true,
-    node: true,
-  },
-  parserOptions: {
-    "sourceType": "module",
-    "ecmaVersion": 2020,
-  },
-  extends: ["eslint:recommended", "google"],
-  rules: {
-    "arrow-parens": ["error", "always"],
-    "brace-style": ["error", "1tbs"],
-    "comma-dangle": ["error", "always-multiline"],
-    "indent": ["error", 2],
-    "max-len": ["error", {code: 120}],
-    "no-console": "off",
-    "no-const-assign": "error",
-    "no-multiple-empty-lines": ["error", {max: 2}],
-    "no-restricted-globals": ["error", "name", "length"],
-    "no-unused-vars": "error",
-    "no-var": "error",
-    "prefer-arrow-callback": "error",
-    "prefer-const": "error",
-    "quotes": ["error", "double", {allowTemplateLiterals: true}],
-    "semi": ["error", "always"],
-  },
-  globals: {},
+	root: true,
+	parserOptions: {
+		ecmaVersion: 2020,
+		sourceType: "module",
+	},
+	plugins: [ "import" ],
+	extends: [ "plugin:@wordpress/eslint-plugin/esnext", "eslint:recommended" ],
+	env: {
+		es2021: true,
+		node: true,
+	},
+	rules: {
+		// Customize ESLint rules here
+		"no-console": "off", // Allowing console statements for development/debugging purposes
+		"no-unused-expressions": "warn", // Warning for unused expressions
+		"no-irregular-whitespace": "warn", // Warning for irregular whitespace
+		"no-undef": "warn", // Warning for using undeclared variables
+		"no-unused-vars": "warn", // Warning for unused variables
+		quotes: [ "error", "double" ], // Enforcing the use of double quotes for strings
+		"import/order": [
+			"error",
+			{
+				groups: [ "builtin", "external", "internal" ],
+				alphabetize: {
+					order: "asc",
+					caseInsensitive: true,
+				},
+				"newlines-between": "always",
+				warnOnUnassignedImports: true,
+			},
+		],
+	},
 };
