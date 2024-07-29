@@ -4,7 +4,7 @@
 	"description": "आचार्य प्रशांत से मेरी आध्यात्मिक शिक्षाओं का संग्रह। इस रिपॉज़िटरी में कबीर के भजन और दोहे, आचार्य प्रशांत के उद्धरण, और आध्यात्मिकता में सहायक शब्दों और विषयों की परिभाषाएँ और मुख्य बिंदु शामिल हैं।",
 	"main": "index.js",
 	"scripts": {
-		"prebuild": "rm -rf dist",
+		"prebuild": "npm run lint && rm -rf dist",
 		"build": "node index.js",
 		"build:docs": "node generateDocs.js",
 		"lint": "eslint ./ --ext .js,.ts,.jsx,.tsx",
