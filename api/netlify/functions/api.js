@@ -14,7 +14,6 @@ app.use( express.json() );
 
 /**
  * Endpoint to fetch Kabir Ke Dohe.
- * @route GET /.netlify/functions/api/kabir-ke-dohe
  * @return {Object[]} 200 - Array of Kabir Ke Dohe objects
  * @return {Error} 500 - Internal server error
  */
