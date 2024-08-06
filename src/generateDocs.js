@@ -2,8 +2,8 @@ import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
 
-import * as ora from "ora";
-import * as prettier from "prettier";
+import ora from "ora"; // For ES modules
+import prettier from "prettier";
 
 // Get the directory name of the current module
 const __filename = fileURLToPath( import.meta.url );
