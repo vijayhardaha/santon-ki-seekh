@@ -11,22 +11,22 @@ const Builder = {
 	/**
 	 * Main run method which sequentially calls various build methods.
 	 *
-	 * @param {Object} params          - Parameters for the run method.
-	 * @param {string} params.fileName - The name of the file to be processed.
-	 * @param {string} params.mdTitle  - The title of the markdown document.
-	 * @param {Object} params.data     - The data to be used in the build process.
+	 * @param {Object} params              - Parameters for the run method.
+	 * @param {string} params.fileName     - The name of the file to be processed.
+	 * @param {string} params.mdTitle      - The title of the markdown document.
+	 * @param {Object} params.data         - The data to be used in the build process.
+	 * @param {Object} params.appendNumber - The data to be used in the build process.
 	 *
 	 * @return {Promise<void>} A promise that resolves when the build process is complete.
 	 *
 	 * @async
 	 */
-	run: async ( {
-		fileName, mdTitle, data,
-	} ) => {
+	run: async ( { fileName, mdTitle, data, appendNumber } ) => {
 		Builder.fileName = fileName;
 		Builder.mdTitle = mdTitle;
 		Builder.outputDirName = "dist";
 		Builder.data = data;
+		Builder.appendNumber = appendNumber;
 		Builder.outputDir = joinPath( process.cwd(), Builder.outputDirName );
 
 		// Ensure the output directory exists

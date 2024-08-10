@@ -34,6 +34,7 @@ async function fetchDoheData() {
 			fileName: "santon-ke-dohe",
 			mdTitle: "संतों के दोहे (Couplets)",
 			data,
+			appendNumber: true,
 		};
 
 		return metaData;

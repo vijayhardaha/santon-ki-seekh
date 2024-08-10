@@ -25,6 +25,7 @@ const QuoteMeta = {
 	fileName: "acharya-prashant-quotes",
 	mdTitle: "आचार्य प्रशांत के उद्धरण (Quotes)",
 	data,
+	appendNumber: false,
 };
 
 export default QuoteMeta;

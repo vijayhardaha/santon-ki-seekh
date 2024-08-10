@@ -38,30 +38,40 @@ export function generateJson( data ) {
 
 /**
  * Generate text data from input data.
- * @param {Array} data - Input data.
+ * @param {Array}   data                 - Input data.
+ * @param {boolean} [appendNumber=false] - Whether to append index number to content. Default is false.
  * @return {string} - Formatted text data.
  */
-export function generateTxt( data ) {
+export function generateTxt( data, appendNumber = false ) {
 	return data
-		.map(
-			( dataSet ) => dataSet.content.join( "\n" ) + generateSuffix( dataSet.author ),
-		)
+		.map( ( dataSet, index ) => {
+			const content = dataSet.content.join( "\n" );
+			const indexSuffix = appendNumber
+				? `${ latinToHindiNumber( padIndex( index + 1, 2 ) ) }।। `
+				: "";
+			return `${ content }${ indexSuffix }${ generateSuffix( dataSet.author ) }`;
+		} )
 		.join( "\n\n================================\n\n" );
 }
 
 /**
  * Generate markdown data from input data.
- * @param {Array}  data    - Input data.
- * @param {string} [title] - Optional title to prepend to document. Default is an empty string.
+ * @param {Array}   data                 - Input data.
+ * @param {string}  [title]              - Optional title to prepend to document. Default is an empty string.
+ * @param {boolean} [appendNumber=false] - Whether to append index number to content. Default is false.
  * @return {string} - Formatted markdown data.
  */
-export function generateMd( data, title = "" ) {
-	const titlePrefix = title ? `# ${ title } \n\n` : "";
+export function generateMd( data, title = "", appendNumber = false ) {
+	const titlePrefix = title ? `# ${ title }\n\n` : "";
+
 	const output = data
-		.map(
-			( dataSet ) =>
-				dataSet.content.join( "\\\n" ) + generateSuffix( dataSet.author ),
-		)
+		.map( ( dataSet, index ) => {
+			const content = dataSet.content.join( "\\\n" );
+			const indexSuffix = appendNumber
+				? `${ latinToHindiNumber( padIndex( index + 1, 2 ) ) }।। `
+				: "";
+			return `${ content }${ indexSuffix }${ generateSuffix( dataSet.author ) }`;
+		} )
 		.join( "\n\n---\n\n" );
 
 	return titlePrefix + output;
@@ -87,7 +97,7 @@ export async function generateCSV( data ) {
  * @return {Promise<void>}
  */
 export const generateData = async ( builder, type ) => {
-	const { outputDir, fileName, data, mdTitle } = builder;
+	const { outputDir, fileName, data, mdTitle, appendNumber } = builder;
 	const path = joinPath( outputDir, `${ fileName }.${ type }` );
 	let fileData;
 
@@ -99,10 +109,10 @@ export const generateData = async ( builder, type ) => {
 			fileData = JSON.stringify( generateJson( data ), null, 2 );
 			break;
 		case "txt":
-			fileData = generateTxt( data );
+			fileData = generateTxt( data, appendNumber );
 			break;
 		case "md":
-			fileData = generateMd( data, mdTitle );
+			fileData = generateMd( data, mdTitle, appendNumber );
 			fileData = await prettier.format( `${ fileData }`, { parser: "markdown" } );
 			break;
 		case "csv":
@@ -118,12 +128,14 @@ export const generateData = async ( builder, type ) => {
 };
 
 /**
- * Pads the index with leading zeros to ensure a 3-digit string.
- * @param {number} index - The index to pad.
+ * Pads the index with leading zeros or a specified character to ensure a desired length.
+ * @param {number} index      - The index to pad.
+ * @param {number} [length=3] - The desired length of the resulting string. Default is 3.
+ * @param {string} [char="0"] - The character to use for padding. Default is "0".
  * @return {string} - The padded index as a string.
  */
-export const padIndex = ( index ) => {
-	return index.toString().padStart( 3, "0" );
+export const padIndex = ( index, length = 3, char = 0 ) => {
+	return index.toString().padStart( length, char );
 };
 
 /**
@@ -135,8 +147,12 @@ export const padIndex = ( index ) => {
 export const latinToHindiNumber = ( latinNumber ) => {
 	const hindiDigits = [ "०", "१", "२", "३", "४", "५", "६", "७", "८", "९" ];
 
-	return latinNumber.toString().split( "" ).map( ( digit ) => {
-		const num = parseInt( digit, 10 );
-		return hindiDigits[ num ];
-	} ).join( "" );
+	return latinNumber
+		.toString()
+		.split( "" )
+		.map( ( digit ) => {
+			const num = parseInt( digit, 10 );
+			return hindiDigits[ num ];
+		} )
+		.join( "" );
 };

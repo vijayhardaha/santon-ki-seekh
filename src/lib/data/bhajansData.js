@@ -386,6 +386,7 @@ const BhajanMeta = {
 	fileName: "santon-ke-bhajan",
 	mdTitle: "संतों के भजन (Prayers)",
 	data,
+	appendNumber: false,
 };
 
 export default BhajanMeta;
