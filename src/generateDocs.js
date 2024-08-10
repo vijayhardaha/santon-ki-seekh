@@ -5,6 +5,9 @@ import { fileURLToPath } from "url";
 import ora from "ora"; // For ES modules
 import prettier from "prettier";
 
+import { latinToHindiNumber, padIndex } from "./lib/helpers/dataGenerator.js";
+import { SANT_KABIR } from "../src/lib/helpers/constants.js";
+
 // Get the directory name of the current module
 const __filename = fileURLToPath( import.meta.url );
 const __dirname = path.dirname( __filename );
@@ -19,7 +22,7 @@ const __dirname = path.dirname( __filename );
 const generateMarkdownContent = ( entries, startNum ) => {
 	return entries
 		.map( ( entry, index ) => {
-			const entryIndex = startNum + index;
+			const entryIndex = latinToHindiNumber( padIndex( startNum + index, 2 ) );
 			return `- ${ entry.content.split( "\n" )
 				.join( "\\\n" ) }${ entryIndex }।।\n\n  — ${ entry.author }`;
 		} ).join( "\n\n***\n\n" );
@@ -59,7 +62,10 @@ const createMarkdownFiles = async ( data, spinner ) => {
 	const docsDir = path.resolve( __dirname, "..", "docs", "dohe" );
 	const entriesPerFile = 50;
 
-	// Ensure the docs directory exists
+	// Remove the 'dohe' directory and all its contents
+	await fs.rm( docsDir, { recursive: true, force: true } );
+
+	// Recreate the 'dohe' directory to ensure it exists for future use
 	await fs.mkdir( docsDir, { recursive: true } );
 
 	let initial = 1;
@@ -91,7 +97,7 @@ const main = async () => {
 
 	try {
 		const data = JSON.parse( await fs.readFile( path.resolve( __dirname, "dist", "santon-ke-dohe.json" ), "utf8" ) );
-		const filteredData = filterEntriesByAuthor( data, "संत कबीर साहब" );
+		const filteredData = filterEntriesByAuthor( data, SANT_KABIR );
 
 		await createMarkdownFiles( filteredData, spinner );
 		spinner.succeed( "Markdown files created successfully." );
