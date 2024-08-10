@@ -125,3 +125,18 @@ export const generateData = async ( builder, type ) => {
 export const padIndex = ( index ) => {
 	return index.toString().padStart( 3, "0" );
 };
+
+/**
+ * Converts a Latin number to a Hindi number.
+ *
+ * @param {number|string} latinNumber - The Latin number to be converted. Can be a number or a string.
+ * @return {string} The Hindi representation of the input number.
+ */
+export const latinToHindiNumber = ( latinNumber ) => {
+	const hindiDigits = [ "०", "१", "२", "३", "४", "५", "६", "७", "८", "९" ];
+
+	return latinNumber.toString().split( "" ).map( ( digit ) => {
+		const num = parseInt( digit, 10 );
+		return hindiDigits[ num ];
+	} ).join( "" );
+};
