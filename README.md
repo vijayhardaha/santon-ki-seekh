@@ -106,8 +106,6 @@ This repository will include the following materials, all of which I have learne
 - [संत कबीर के दोहे संग्रह — 2601 to 2650][sant-kabir-ke-dohe-53]
 - [संत कबीर के दोहे संग्रह — 2651 to 2700][sant-kabir-ke-dohe-54]
 - [संत कबीर के दोहे संग्रह — 2701 to 2750][sant-kabir-ke-dohe-55]
-- [संत कबीर के दोहे संग्रह — 2751 to 2800][sant-kabir-ke-dohe-56]
-- [संत कबीर के दोहे संग्रह — 2801 to 2850][sant-kabir-ke-dohe-57]
 
 [sant-kabir-ke-dohe-01]: docs/dohe/sant-kabir-ke-dohe-01.md
 [sant-kabir-ke-dohe-02]: docs/dohe/sant-kabir-ke-dohe-02.md
@@ -164,8 +162,6 @@ This repository will include the following materials, all of which I have learne
 [sant-kabir-ke-dohe-53]: docs/dohe/sant-kabir-ke-dohe-53.md
 [sant-kabir-ke-dohe-54]: docs/dohe/sant-kabir-ke-dohe-54.md
 [sant-kabir-ke-dohe-55]: docs/dohe/sant-kabir-ke-dohe-55.md
-[sant-kabir-ke-dohe-56]: docs/dohe/sant-kabir-ke-dohe-56.md
-[sant-kabir-ke-dohe-57]: docs/dohe/sant-kabir-ke-dohe-57.md
 
 ## Usage
 
@@ -182,22 +178,22 @@ Below are the assets available for download, categorized based on their content 
 | Santo Ke Dohe           | [CSV][dohe-csv], [JSON][dohe-json], [MD][dohe-md], [JSON(RAW)][dohe-json-raw], [TXT][dohe-txt]                |
 | All-in-One Assets       | [ZIP][all-in-one]                                                                                             |
 
-[acharya-csv]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.7/acharya-prashant-quotes.csv
-[acharya-json]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.7/acharya-prashant-quotes.json
-[acharya-md]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.7/acharya-prashant-quotes.md
-[acharya-json-raw]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.7/acharya-prashant-quotes.raw.json
-[acharya-txt]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.7/acharya-prashant-quotes.txt
-[bhajan-csv]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.7/santon-ke-bhajan.csv
-[bhajan-json]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.7/santon-ke-bhajan.json
-[bhajan-md]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.7/santon-ke-bhajan.md
-[bhajan-json-raw]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.7/santon-ke-bhajan.raw.json
-[bhajan-txt]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.7/santon-ke-bhajan.txt
-[dohe-csv]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.7/santon-ke-dohe.csv
-[dohe-json]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.7/santon-ke-dohe.json
-[dohe-md]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.7/santon-ke-dohe.md
-[dohe-json-raw]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.7/santon-ke-dohe.raw.json
-[dohe-txt]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.7/santon-ke-dohe.txt
-[all-in-one]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.7/all-in-one-assets.zip
+[acharya-csv]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.8/acharya-prashant-quotes.csv
+[acharya-json]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.8/acharya-prashant-quotes.json
+[acharya-md]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.8/acharya-prashant-quotes.md
+[acharya-json-raw]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.8/acharya-prashant-quotes.raw.json
+[acharya-txt]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.8/acharya-prashant-quotes.txt
+[bhajan-csv]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.8/santon-ke-bhajan.csv
+[bhajan-json]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.8/santon-ke-bhajan.json
+[bhajan-md]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.8/santon-ke-bhajan.md
+[bhajan-json-raw]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.8/santon-ke-bhajan.raw.json
+[bhajan-txt]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.8/santon-ke-bhajan.txt
+[dohe-csv]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.8/santon-ke-dohe.csv
+[dohe-json]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.8/santon-ke-dohe.json
+[dohe-md]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.8/santon-ke-dohe.md
+[dohe-json-raw]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.8/santon-ke-dohe.raw.json
+[dohe-txt]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.8/santon-ke-dohe.txt
+[all-in-one]: https://github.com/vijayhardaha/santo-ki-seekh/releases/download/v1.0.8/all-in-one-assets.zip
 
 ## Contribution
 

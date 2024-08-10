@@ -1,6 +1,6 @@
 {
   "name": "santo-ki-seekh",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "API for Santo ki Seekh, providing access to bhajans and dohas in various formats.",
   "dependencies": {
     "@wordpress/eslint-plugin": "^20.1.0",
