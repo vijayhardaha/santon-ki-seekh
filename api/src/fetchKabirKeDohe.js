@@ -93,7 +93,7 @@ async function fetchKabirKeDohe() {
 
 		const processedData = mappedData.map( ( row ) => ( {
 			index: parseInt( row.index ?? 0 ),
-			slug: cleanString( createSlug( row.title_en ) ),
+			slug: cleanString( createSlug( row.title_en, "-" ) ),
 			featured: row.featured?.toLowerCase() === "yes" || false,
 			title_hi: cleanString( row.title_hi ?? "" ),
 			verse_hi: cleanString( row.verse_hi ?? "" ),
