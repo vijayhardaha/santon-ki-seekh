@@ -1,6 +1,6 @@
 import { GURU_KABIR } from "../helpers/constants.js";
 
-const dataSet = [
+const data = [
 	{
 		id: "amarpur-le-chalo-sajna",
 		author: GURU_KABIR,
@@ -385,7 +385,7 @@ const dataSet = [
 const BhajanMeta = {
 	fileName: "santon-ke-bhajan",
 	mdTitle: "संतों के भजन (Prayers)",
-	data: dataSet,
+	data,
 };
 
 export default BhajanMeta;
