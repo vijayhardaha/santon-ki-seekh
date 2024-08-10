@@ -11,13 +11,14 @@ const cleanString = ( str ) => str.replace( /[^\S\r\n]+/g, " " ).trim();
 /**
  * Creates a URL-friendly slug from the given text.
  *
- * @param {string} text - The text to be converted into a slug.
+ * @param {string} text              - The text to be converted into a slug.
+ * @param {string} [replacement="_"] - The character to replace spaces and other delimiters.
  * @return {string} The generated slug.
  */
-const createSlug = ( text ) => {
+const createSlug = ( text, replacement = "_" ) => {
 	return slugify( latinize( text ), {
 		lower: true,
-		replacement: "_",
+		replacement,
 		strict: true,
 		trim: true,
 	} );
@@ -73,7 +74,6 @@ async function fetchKabirKeDohe() {
 	const url = `https://sheets.googleapis.com/v4/spreadsheets/${ SPREADSHEET_ID }/values/${ range }?key=${ API_KEY }`;
 
 	try {
-		console.log( url );
 		const response = await fetch( url );
 		if ( ! response.ok ) {
 			throw new Error( "Network response was not ok" );
@@ -92,14 +92,16 @@ async function fetchKabirKeDohe() {
 		const mappedData = mapCsvDataToJson( jsonData, header );
 
 		const processedData = mappedData.map( ( row ) => ( {
-			index: parseInt( row.index ?? 0 ), // Provide a default value if `index` is undefined or not a number
-			doha: cleanString( row.doha ?? "" ), // Provide a default empty string if `doha` is undefined
-			english_doha: cleanString( row.english_doha ?? "" ), // Provide a default empty string if `english_doha` is undefined
-			title_hindi: cleanString( row.title_hindi ?? "" ), // Provide a default empty string if `title_hindi` is undefined
-			title_english: cleanString( row.title_english ?? "" ), // Provide a default empty string if `title_english` is undefined
-			slug: cleanString( row?.slug?.trim() ?? "" ), // Safely handle `slug` and provide a default empty string if undefined
-			meaning: row?.meaning?.trim() ?? "", // Safely handle `meaning` and provide a default empty string if undefined
-			tags: row?.tags?.trim() ?? "", // Safely handle `tags` and provide a default empty string if undefined
+			index: parseInt( row.index ?? 0 ),
+			slug: cleanString( createSlug( row.title_en ) ),
+			featured: row.featured?.toLowerCase() === "yes" || false,
+			title_hi: cleanString( row.title_hi ?? "" ),
+			verse_hi: cleanString( row.verse_hi ?? "" ),
+			meaning_hi: row?.meaning_hi?.trim() ?? "",
+			title_en: cleanString( row.title_en ?? "" ),
+			verse_en: cleanString( row.verse_en ?? "" ),
+			meaning_en: row?.meaning_en?.trim() ?? "",
+			tags: row?.tags?.trim() ?? "",
 		} ) );
 
 		return processedData;
