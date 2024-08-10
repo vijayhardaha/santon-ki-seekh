@@ -98,9 +98,11 @@ async function fetchKabirKeDohe() {
 			title_hi: cleanString( row.title_hi ?? "" ),
 			verse_hi: cleanString( row.verse_hi ?? "" ),
 			meaning_hi: row?.meaning_hi?.trim() ?? "",
+			author_hi: "संत कबीर दास साहेब",
 			title_en: cleanString( row.title_en ?? "" ),
 			verse_en: cleanString( row.verse_en ?? "" ),
 			meaning_en: row?.meaning_en?.trim() ?? "",
+			author_en: "Sant Kabir Das Saheb",
 			tags: row?.tags?.trim() ?? "",
 		} ) );
 
