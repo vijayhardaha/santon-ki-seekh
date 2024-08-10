@@ -13,7 +13,8 @@ import { joinPath, writeFile } from "./fileSystemUtils.js";
  * @param {string} author - The author of the dataSet.
  * @return {string} The generated suffix string.
  */
-const generateSuffix = ( author ) => ( author ? `\n\n${ AUTHOR_PREFIX } ${ author }` : "" );
+const generateSuffix = ( author ) =>
+	author ? `\n\n${ AUTHOR_PREFIX } ${ author }` : "";
 
 /**
  * Sorts an array of objects by the 'id' field in ascending order.
@@ -42,7 +43,9 @@ export function generateJson( data ) {
  */
 export function generateTxt( data ) {
 	return data
-		.map( ( dataSet ) => dataSet.content.join( "\n" ) + generateSuffix( dataSet.author ) )
+		.map(
+			( dataSet ) => dataSet.content.join( "\n" ) + generateSuffix( dataSet.author ),
+		)
 		.join( "\n\n================================\n\n" );
 }
 
@@ -55,7 +58,10 @@ export function generateTxt( data ) {
 export function generateMd( data, title = "" ) {
 	const titlePrefix = title ? `# ${ title } \n\n` : "";
 	const output = data
-		.map( ( dataSet ) => dataSet.content.join( "\\\n" ) + generateSuffix( dataSet.author ) )
+		.map(
+			( dataSet ) =>
+				dataSet.content.join( "\\\n" ) + generateSuffix( dataSet.author ),
+		)
 		.join( "\n\n---\n\n" );
 
 	return titlePrefix + output;
@@ -67,7 +73,9 @@ export function generateMd( data, title = "" ) {
  * @return {Promise<string>} - CSV data.
  */
 export async function generateCSV( data ) {
-	const jsonData = data.map( ( dataSet ) => [ dataSet.content.join( "\n" ) + generateSuffix( dataSet.author ) ] );
+	const jsonData = data.map( ( dataSet ) => [
+		dataSet.content.join( "\n" ) + generateSuffix( dataSet.author ),
+	] );
 	const csvData = await json2csv( jsonData );
 	return csvData;
 }
@@ -79,9 +87,7 @@ export async function generateCSV( data ) {
  * @return {Promise<void>}
  */
 export const generateData = async ( builder, type ) => {
-	const {
-		outputDir, fileName, data, mdTitle,
-	} = builder;
+	const { outputDir, fileName, data, mdTitle } = builder;
 	const path = joinPath( outputDir, `${ fileName }.${ type }` );
 	let fileData;
 
@@ -109,4 +115,13 @@ export const generateData = async ( builder, type ) => {
 	await writeFile( path, fileData );
 
 	return Promise.resolve();
+};
+
+/**
+ * Pads the index with leading zeros to ensure a 3-digit string.
+ * @param {number} index - The index to pad.
+ * @return {string} - The padded index as a string.
+ */
+export const padIndex = ( index ) => {
+	return index.toString().padStart( 3, "0" );
 };
