@@ -7,7 +7,7 @@ import { fetchData } from "@/src/api/fetchData.mjs";
  * @param {import('next').NextApiResponse} res - The HTTP response object.
  */
 export default async function handler(req, res) {
-	if (req.method !== "GET") {
+	if (req.method !== "POST") {
 		return res.status(405).json({ success: false, message: "Method not allowed. Use POST." });
 	}
 
