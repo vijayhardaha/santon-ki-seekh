@@ -81,7 +81,7 @@ const createMarkdownFiles = async (data, spinner) => {
 const main = async () => {
 	const spinner = ora("Fetching data and creating markdown files...").start();
 
-	const filePath = path.resolve(process.cwd(), "src/data", "posts.json");
+	const filePath = path.resolve(process.cwd(), "src/data", "couplets.json");
 
 	try {
 		// Check if the file exists

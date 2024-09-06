@@ -17,14 +17,14 @@ const buildData = async () => {
 
 		// Define the directory and file paths
 		const dataDir = path.join(process.cwd(), "src/data");
-		const postsFilePath = path.join(dataDir, "posts.json");
+		const postsFilePath = path.join(dataDir, "couplets.json");
 
 		// Check if the directory exists; if not, create it
 		if (!fs.existsSync(dataDir)) {
 			fs.mkdirSync(dataDir, { recursive: true });
 		}
 
-		// Save the processed data to posts.json
+		// Save the processed data to couplets.json
 		fs.writeFileSync(postsFilePath, JSON.stringify(couplets, null, 2));
 
 		spinner.succeed("Data fetched and saved successfully");
