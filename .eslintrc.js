@@ -5,20 +5,15 @@ module.exports = {
 		"next",
 		"next/core-web-vitals",
 		"eslint:recommended",
-		"plugin:@typescript-eslint/recommended",
 		"plugin:react/recommended",
 		"plugin:jsx-a11y/recommended",
+		"plugin:prettier/recommended", // Add Prettier integration
 	],
-	parser: "@typescript-eslint/parser",
-	parserOptions: {
-		ecmaVersion: 2020,
-		sourceType: "module",
-	},
-	plugins: ["react", "@typescript-eslint", "jsx-a11y", "import"],
+	plugins: ["react", "jsx-a11y", "import", "prettier"],
 	rules: {
 		// Customize ESLint rules here
-		"react/react-in-jsx-scope": "off", // Next.js does not require importing React in JSX files
-		"@typescript-eslint/explicit-module-boundary-types": "off", // Example customization
+		"react/react-in-jsx-scope": "off", // Next.js does not require importing React in JSX files.
+		"prettier/prettier": "error", // Enforce Prettier formatting as errors.
 		"import/order": [
 			"error",
 			{
