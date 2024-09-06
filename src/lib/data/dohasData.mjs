@@ -11,15 +11,15 @@ import { fetchData } from "@/src/api/fetchData.mjs";
  */
 async function fetchDoheData() {
 	try {
-		const verses = await fetchData();
+		const couplets = await fetchData();
 
 		// Process and filter data
-		const data = verses
-			.filter((item) => item.verse_hi && item.verse_hi.trim() !== "") // Filter out empty dohas
+		const data = couplets
+			.filter((item) => item.couplet_hindi && item.couplet_hindi.trim() !== "") // Filter out empty dohas
 			.map((item) => ({
 				id: `${item.slug}-${padIndex(item.index)}`, // Generate a unique ID using slug and index
 				author: SANT_KABIR, // Author of the dohas
-				content: item.verse_hi.split("\n").map((verse) => verse.trim()), // Split and trim dohas
+				content: item.couplet_hindi.split("\n").map((couplet) => couplet.trim()), // Split and trim dohas
 			}));
 
 		const metaData = {

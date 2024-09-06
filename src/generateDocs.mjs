@@ -89,8 +89,8 @@ const main = async () => {
 
 		const data = JSON.parse(await fs.readFile(filePath, "utf8"));
 
-		const filterData = data.map(({ unique_slug, verse_hindi }) => {
-			return { id: unique_slug, author: SANT_KABIR, content: verse_hindi };
+		const filterData = data.map(({ unique_slug, couplet_hindi }) => {
+			return { id: unique_slug, author: SANT_KABIR, content: couplet_hindi };
 		});
 
 		await createMarkdownFiles(filterData, spinner);

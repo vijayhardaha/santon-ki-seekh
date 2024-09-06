@@ -13,7 +13,7 @@ const buildData = async () => {
 	const spinner = ora("Fetching data...").start();
 
 	try {
-		const verses = await fetchData();
+		const couplets = await fetchData();
 
 		// Define the directory and file paths
 		const dataDir = path.join(process.cwd(), "src/data");
@@ -25,7 +25,7 @@ const buildData = async () => {
 		}
 
 		// Save the processed data to posts.json
-		fs.writeFileSync(postsFilePath, JSON.stringify(verses, null, 2));
+		fs.writeFileSync(postsFilePath, JSON.stringify(couplets, null, 2));
 
 		spinner.succeed("Data fetched and saved successfully");
 	} catch (error) {

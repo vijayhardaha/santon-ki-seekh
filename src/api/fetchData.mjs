@@ -7,24 +7,23 @@ import { cleanString, createSlug, generateShortHash, padIndex, parseAndUniqueLis
  */
 export const fetchData = async () => {
 	// Fetch data from Google Sheets.
-	const verses = await getGoogleSheetData("kabir-ke-dohe");
+	const couplets = await getGoogleSheetData("kabir-ke-dohe");
 
 	// Validate the data.
-	if (!Array.isArray(verses)) {
+	if (!Array.isArray(couplets)) {
 		throw new Error("Invalid data format received from Google Sheets.");
 	}
 
-	let processedData = verses.map((row) => ({
+	let processedData = couplets.map((row) => ({
 		index: parseInt(row.index ?? 0),
 		slug: cleanString(createSlug(row.title_english, "-")),
-		featured: row.featured?.toLowerCase() === "yes" || false,
-		verse_hindi: cleanString(row.verse_hindi ?? ""),
+		popular: row.popular?.toLowerCase() === "yes" || false,
+		couplet_hindi: cleanString(row.couplet_hindi ?? ""),
+		couplet_english: cleanString(row.couplet_english ?? ""),
 		translation_hindi: row?.translation_hindi?.trim() ?? "",
-		explanation_hindi: row?.explanation_hindi?.trim() ?? "",
-		verse_english: cleanString(row.verse_english ?? ""),
 		translation_english: row?.translation_english?.trim() ?? "",
+		explanation_hindi: row?.explanation_hindi?.trim() ?? "",
 		explanation_english: row?.explanation_english?.trim() ?? "",
-		categories: row?.categories?.trim() ?? "",
 		tags: row?.tags?.trim() ?? "",
 	}));
 
@@ -45,24 +44,19 @@ export const fetchData = async () => {
 		usedHashes.add(shortHash);
 
 		// Process tags with slugified keys
-		const categories = parseAndUniqueList(item.categories);
 		const tags = parseAndUniqueList(item.tags);
 
 		return {
 			id: index + 1,
 			slug: createSlug(item.slug),
 			unique_slug: createSlug(`${cleanSlug}-${shortHash}`),
-			verse_hindi: item.verse_hindi,
-			verse_english: item.verse_english,
+			couplet_hindi: item.couplet_hindi,
+			couplet_english: item.couplet_english,
 			translation_hindi: item.translation_hindi,
 			translation_english: item.translation_english,
 			explanation_hindi: item.explanation_hindi,
 			explanation_english: item.explanation_english,
-			featured: Boolean(item.featured) || false,
-			categories: categories.map((cat) => ({
-				slug: createSlug(cat),
-				name: cat,
-			})),
+			popular: Boolean(item.popular) || false,
 			tags: tags.map((tag) => ({
 				slug: createSlug(tag),
 				name: tag,
