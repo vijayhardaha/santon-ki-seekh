@@ -1,9 +1,9 @@
 # संतों की सीख (Santon ki Seekh)
 
-This repository will include the following materials, all of which I have learned and understood through [Acharya Prashant](https://acharyaprashant.org/en/gita):
+इस रिपॉजिटरी में विभिन्न आध्यात्मिक सामग्री शामिल की जाएगी, जो संतों के शिक्षाओं और संदेशों को उजागर करती है:
 
-- **भजन (Prayers)**: विभिन्न संतों के भजन जो आध्यात्मिकता और भक्ति की ओर प्रेरित करते हैं।
-- **प्रसिद्ध दोहे (Famous Couplets)**: संतों द्वारा रचित प्रसिद्ध दोहे और उनके जीवन के संदेश।
+- **भजन (Prayers)**: संतों के भजन, जो हमें आध्यात्मिकता और भक्ति की ओर प्रेरित करते हैं।
+- **प्रसिद्ध दोहे (Famous Couplets)**: संतों द्वारा रचित प्रसिद्ध दोहे और उनके जीवन के महत्वपूर्ण संदेश।
 
 ## भजन संग्रह (Prayer Collections)
 
@@ -198,6 +198,12 @@ Below are the assets available for download, categorized based on their content 
 ## Contribution
 
 If you wish to add a new bhajan, doha, quote, or definition to this repository, please submit a pull request. Your contribution is welcome!
+
+If you wish to create something related to Kabir das couplets and need data for all the couplets, you can obtain the data from the API URL created by us:
+
+```bash
+curl https://santonkiseekh.vercel.app/api/kabir-couplets/
+```
 
 ## License
 
