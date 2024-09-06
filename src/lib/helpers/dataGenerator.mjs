@@ -95,7 +95,7 @@ export const generateData = async (builder, type) => {
 	let fileData;
 
 	switch (type) {
-		case "raw.jsmon":
+		case "raw.json":
 			fileData = JSON.stringify(data, null, 2);
 			break;
 		case "json":

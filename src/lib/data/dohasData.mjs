@@ -1,6 +1,6 @@
+import { fetchData } from "../../api/fetchData.mjs";
 import { SANT_KABIR } from "../helpers/constants.mjs";
 import { padIndex } from "../helpers/dataGenerator.mjs";
-import { fetchData } from "@/src/api/fetchData.mjs";
 
 /**
  * Fetches Kabir Ke Dohe data from the specified API endpoint.
@@ -17,7 +17,7 @@ async function fetchDoheData() {
 		const data = couplets
 			.filter((item) => item.couplet_hindi && item.couplet_hindi.trim() !== "") // Filter out empty dohas
 			.map((item) => ({
-				id: `${item.slug}-${padIndex(item.index)}`, // Generate a unique ID using slug and index
+				id: `${item.slug}-${padIndex(item.id)}`, // Generate a unique ID using slug and index
 				author: SANT_KABIR, // Author of the dohas
 				content: item.couplet_hindi.split("\n").map((couplet) => couplet.trim()), // Split and trim dohas
 			}));
