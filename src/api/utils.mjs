@@ -107,23 +107,23 @@ export const mapCsvDataToJson = (data) => {
  */
 export const toTitleCase = (str) => {
 	return str
-			.toLowerCase()  // Convert the string to lowercase.
-			.split(" ")  // Split the string into words.
-			.map(word => word.charAt(0).toUpperCase() + word.slice(1))  // Capitalize the first letter of each word.
-			.join(" ");  // Join the words back into a single string.
+		.toLowerCase() // Convert the string to lowercase.
+		.split(" ") // Split the string into words.
+		.map((word) => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize the first letter of each word.
+		.join(" "); // Join the words back into a single string.
 };
 
 /**
-* Splits a comma-separated string into an array of title-cased, trimmed, unique, non-empty values.
-*
-* @param {string} data - The comma-separated string to process.
-* @returns {string[]} - An array of title-cased, unique, trimmed, non-empty values.
-*/
+ * Splits a comma-separated string into an array of title-cased, trimmed, unique, non-empty values.
+ *
+ * @param {string} data - The comma-separated string to process.
+ * @returns {string[]} - An array of title-cased, unique, trimmed, non-empty values.
+ */
 export const parseAndUniqueList = (data) => {
 	return data
-			.split(",")  // Split the string into an array by commas.
-			.map(item => item.trim())  // Trim whitespace from each item.
-			.filter(item => item !== "")  // Remove empty items.
-			.map(item => toTitleCase(item))  // Convert each item to title case.
-			.filter((item, index, self) => self.indexOf(item) === index);  // Ensure uniqueness.
+		.split(",") // Split the string into an array by commas.
+		.map((item) => item.trim()) // Trim whitespace from each item.
+		.filter((item) => item !== "") // Remove empty items.
+		.map((item) => toTitleCase(item)) // Convert each item to title case.
+		.filter((item, index, self) => self.indexOf(item) === index); // Ensure uniqueness.
 };

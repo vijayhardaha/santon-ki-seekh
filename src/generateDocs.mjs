@@ -18,9 +18,7 @@ const generateMarkdownContent = (entries, startNum) => {
 	return entries
 		.map((entry, index) => {
 			const entryIndex = latinToHindiNumber(padIndex(startNum + index, 2));
-			return `- ${entry.content
-				.split("\n")
-				.join("\\\n")}${entryIndex}।।\n\n  — ${entry.author}`;
+			return `- ${entry.content.split("\n").join("\\\n")}${entryIndex}।।\n\n  — ${entry.author}`;
 		})
 		.join("\n\n***\n\n");
 };

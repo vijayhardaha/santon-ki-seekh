@@ -1,11 +1,5 @@
 import { getGoogleSheetData } from "./getGoogleSheetData.mjs";
-import {
-	cleanString,
-	createSlug,
-	generateShortHash,
-	padIndex,
-	parseAndUniqueList,
-} from "./utils.mjs";
+import { cleanString, createSlug, generateShortHash, padIndex, parseAndUniqueList } from "./utils.mjs";
 
 /**
  * Fetches data from the API, processes it, and saves it to JSON files.

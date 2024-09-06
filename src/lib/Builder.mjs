@@ -21,16 +21,16 @@ const Builder = {
 	 *
 	 * @async
 	 */
-	run: async ( { fileName, mdTitle, data, appendNumber } ) => {
+	run: async ({ fileName, mdTitle, data, appendNumber }) => {
 		Builder.fileName = fileName;
 		Builder.mdTitle = mdTitle;
 		Builder.outputDirName = "dist";
 		Builder.data = data;
 		Builder.appendNumber = appendNumber;
-		Builder.outputDir = joinPath( process.cwd(), Builder.outputDirName );
+		Builder.outputDir = joinPath(process.cwd(), Builder.outputDirName);
 
 		// Ensure the output directory exists
-		await makeDir( Builder.outputDir );
+		await makeDir(Builder.outputDir);
 
 		// Build files in different formats
 		await Builder.buildRawJson();
@@ -44,31 +44,31 @@ const Builder = {
 	 * Build raw JSON data
 	 * @return {Promise<void>}
 	 */
-	buildRawJson: async () => generateData( Builder, "raw.json" ),
+	buildRawJson: async () => generateData(Builder, "raw.json"),
 
 	/**
 	 * Build formatted JSON data
 	 * @return {Promise<void>}
 	 */
-	buildJson: async () => generateData( Builder, "json" ),
+	buildJson: async () => generateData(Builder, "json"),
 
 	/**
 	 * Build text file
 	 * @return {Promise<void>}
 	 */
-	buildTxt: async () => generateData( Builder, "txt" ),
+	buildTxt: async () => generateData(Builder, "txt"),
 
 	/**
 	 * Build markdown file
 	 * @return {Promise<void>}
 	 */
-	buildMd: async () => generateData( Builder, "md" ),
+	buildMd: async () => generateData(Builder, "md"),
 
 	/**
 	 * Build CSV file
 	 * @return {Promise<void>}
 	 */
-	buildCsv: async () => generateData( Builder, "csv" ),
+	buildCsv: async () => generateData(Builder, "csv"),
 };
 
 // Export the Builder module

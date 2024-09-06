@@ -10,7 +10,7 @@ import path from "path";
  * @param {string} filePath - Local file path.
  * @return {string} - The file extension.
  */
-export const getFileExtension = ( filePath ) => path.extname( filePath );
+export const getFileExtension = (filePath) => path.extname(filePath);
 
 /**
  * Get the file basename from the file path.
@@ -19,9 +19,9 @@ export const getFileExtension = ( filePath ) => path.extname( filePath );
  * @param {boolean} removeExt - Remove extension from file basename if true. (Default: false)
  * @return {string} - The file basename.
  */
-export const getFileName = ( filePath, removeExt = false ) => {
-	const ext = removeExt ? getFileExtension( filePath ) : "";
-	return path.basename( filePath, ext );
+export const getFileName = (filePath, removeExt = false) => {
+	const ext = removeExt ? getFileExtension(filePath) : "";
+	return path.basename(filePath, ext);
 };
 
 /**
@@ -30,7 +30,7 @@ export const getFileName = ( filePath, removeExt = false ) => {
  * @param {string} pathSegments - Local file paths.
  * @return {string} - The resolved path.
  */
-export const resolvePath = ( ...pathSegments ) => path.resolve( ...pathSegments );
+export const resolvePath = (...pathSegments) => path.resolve(...pathSegments);
 
 /**
  * Join the path.
@@ -38,7 +38,7 @@ export const resolvePath = ( ...pathSegments ) => path.resolve( ...pathSegments 
  * @param {string} pathSegments - Local file paths.
  * @return {string} - The joined path.
  */
-export const joinPath = ( ...pathSegments ) => path.join( ...pathSegments );
+export const joinPath = (...pathSegments) => path.join(...pathSegments);
 
 /**
  * Check if a file or directory path exists or not.
@@ -50,13 +50,13 @@ export const joinPath = ( ...pathSegments ) => path.join( ...pathSegments );
  * @param {string} filePath - Local file or directory path.
  * @return {boolean} - True if it exists; otherwise, false.
  */
-export async function isExists( filePath ) {
-	const checkPermissions = async ( checkPath, flags ) => {
+export async function isExists(filePath) {
+	const checkPermissions = async (checkPath, flags) => {
 		try {
-			await fs.access( checkPath, flags );
+			await fs.access(checkPath, flags);
 			return true;
-		} catch ( err ) {
-			if ( err.code === "ENOENT" ) {
+		} catch (err) {
+			if (err.code === "ENOENT") {
 				return false;
 			}
 			throw err;
@@ -64,9 +64,9 @@ export async function isExists( filePath ) {
 	};
 
 	// Check for file existence, read permission, and write permission.
-	const isFileExists = await checkPermissions( filePath, constants.F_OK );
-	const hasReadPermission = await checkPermissions( filePath, constants.R_OK );
-	const hasWritePermission = await checkPermissions( filePath, constants.W_OK );
+	const isFileExists = await checkPermissions(filePath, constants.F_OK);
+	const hasReadPermission = await checkPermissions(filePath, constants.R_OK);
+	const hasWritePermission = await checkPermissions(filePath, constants.W_OK);
 
 	return isFileExists && hasReadPermission && hasWritePermission;
 }
@@ -76,8 +76,8 @@ export async function isExists( filePath ) {
  *
  * @param {string} dirPath - Directory path.
  */
-export async function makeDir( dirPath ) {
-	await fs.mkdir( dirPath, { recursive: true } );
+export async function makeDir(dirPath) {
+	await fs.mkdir(dirPath, { recursive: true });
 }
 
 /**
@@ -90,6 +90,6 @@ export async function makeDir( dirPath ) {
  *
  * @async
  */
-export async function writeFile( filePath, data ) {
-	await fs.writeFile( filePath, data );
+export async function writeFile(filePath, data) {
+	await fs.writeFile(filePath, data);
 }
