@@ -10,6 +10,15 @@ module.exports = {
 		"plugin:prettier/recommended", // Add Prettier integration
 	],
 	plugins: ["react", "jsx-a11y", "import", "prettier"],
+	env: {
+		browser: true, // Add browser environment for web applications.
+		node: true, // Add Node.js environment for server-side code.
+		es6: true, // Enable ES6 syntax.
+	},
+	parserOptions: {
+		ecmaVersion: 2024, // Set to latest ECMAScript version.
+		sourceType: "module",
+	},
 	rules: {
 		// Customize ESLint rules here
 		"react/react-in-jsx-scope": "off", // Next.js does not require importing React in JSX files.
