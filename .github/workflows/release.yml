@@ -16,6 +16,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - name: Get Tag
+      id: tag
+      run: echo "tag=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
+
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
@@ -51,7 +55,7 @@ jobs:
         artifacts: |
           all-in-one-assets.zip
           ${{ env.files }}
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ env.GITHUB_TOKEN }}
         tag: ${{ github.ref }}
         name: ${{ env.tag }}
         draft: false
