@@ -16,23 +16,22 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Get Tag
-      id: tag
-      run: echo "tag=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
-
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
         node-version: '20'
 
     - name: Install dependencies
-      run: npm install --prefix src
+      run: npm install
+
+    - name: Update packages
+      run: npm update
 
     - name: Build the project
-      run: npm run build --prefix src
+      run: npm run build
 
     - name: Rename dist folder to all-in-one-assets
-      run: mv src/dist all-in-one-assets
+      run: mv dist all-in-one-assets
 
     - name: Zip the all-in-one-assets folder
       run: zip -r all-in-one-assets.zip all-in-one-assets/
@@ -52,7 +51,7 @@ jobs:
         artifacts: |
           all-in-one-assets.zip
           ${{ env.files }}
-        token: ${{ env.GITHUB_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         tag: ${{ github.ref }}
         name: ${{ env.tag }}
         draft: false
