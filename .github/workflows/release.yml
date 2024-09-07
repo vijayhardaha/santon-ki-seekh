@@ -28,7 +28,7 @@ jobs:
       run: npm update
 
     - name: Build the project
-      run: npm run build
+      run: npm run build:assets
 
     - name: Rename dist folder to all-in-one-assets
       run: mv dist all-in-one-assets
