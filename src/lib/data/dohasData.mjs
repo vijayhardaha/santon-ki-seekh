@@ -1,6 +1,33 @@
-import { fetchData } from "../../api/fetchData.mjs";
 import { SANT_KABIR } from "../helpers/constants.mjs";
 import { padIndex } from "../helpers/dataGenerator.mjs";
+
+// Function to fetch data from the given API endpoint
+async function fetchData() {
+	try {
+		const response = await fetch("https://santonkiseekh.vercel.app/api/kabir-couplets/", {
+			method: "POST", // Use POST method as the endpoint requires it
+			headers: {
+				"Content-Type": "application/json",
+			},
+		});
+
+		// Check if the response is OK
+		if (!response.ok) {
+			throw new Error(`HTTP error! Status: ${response.status}`);
+		}
+
+		// Parse the JSON response
+		const data = await response.json();
+		if (data.success) {
+			return data.data;
+		}
+
+		return [];
+	} catch (error) {
+		console.error("Error fetching data:", error);
+		throw error; // Rethrow error to be handled by calling code
+	}
+}
 
 /**
  * Fetches Kabir Ke Dohe data from the specified API endpoint.
