@@ -3,14 +3,11 @@
 	"version": "1.0.9",
 	"description": "यह संग्रह आध्यात्मिक शिक्षाओं का एक चयन है, जिसमें संत कबीर के भजन और दोहे, महत्वपूर्ण उद्धरण, और आध्यात्मिकता से संबंधित प्रमुख शब्दों और विषयों की परिभाषाएँ शामिल हैं।",
 	"scripts": {
-		"build:data": "node src/buildData.mjs",
-		"prebuild:docs": "npm run build:data && rm -rf docs/dohe",
+		"prebuild:docs": "rm -rf docs/dohe",
 		"build:docs": "node src/generateDocs.mjs",
 		"build:assets": "node src/buildAssets.mjs",
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"lint": "next lint"
+		"lint": "eslint ./src --ext .js,.mjs",
+		"format": "eslint ./src --ext .js,.mjs --fix"
 	},
 	"author": "Vijay Hardaha",
 	"license": "MIT",
