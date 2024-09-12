@@ -6,9 +6,9 @@
 		"clean:docs": "rm -rf docs/dohe",
 		"format:docs": "prettier --write 'docs/**/*.md' --log-level error",
 		"prebuild:docs": "npm run clean:docs",
-		"build:docs": "node src/generateDocs.js",
+		"build:docs": "node src/scripts/docs.js",
 		"postbuild:docs": "npm run format:docs",
-		"build:assets": "node src/buildAssets.js",
+		"build:assets": "node src/scripts/assets.js",
 		"postbuild:assets": "prettier --write 'dist/**/*.md' --log-level error",
 		"lint:src": "eslint ./src --ext .js,.mjs",
 		"format:src": "eslint ./src --ext .js,.mjs --fix"
