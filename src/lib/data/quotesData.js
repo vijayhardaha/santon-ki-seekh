@@ -1,4 +1,4 @@
-import { ACHARYA_PRASHANT } from "../helpers/constants.mjs";
+import { ACHARYA_PRASHANT } from "../helpers/constants";
 
 const data = [
 	{

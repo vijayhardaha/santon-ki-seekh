@@ -1,4 +1,4 @@
-import { GURU_KABIR } from "../helpers/constants.mjs";
+import { GURU_KABIR } from "../helpers/constants";
 
 const data = [
 	{

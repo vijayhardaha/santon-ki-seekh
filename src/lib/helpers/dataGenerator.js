@@ -2,10 +2,10 @@
  * Import necessary packages and functions.
  */
 import { json2csv } from "json-2-csv";
-import * as prettier from "prettier";
+import { prettier } from "prettier";
 
-import { AUTHOR_PREFIX } from "./constants.mjs";
-import { joinPath, writeFile } from "./fileSystemUtils.mjs";
+import { AUTHOR_PREFIX } from "./constants";
+import { joinPath, writeFile } from "./fileSystemUtils";
 
 /**
  * Generates a suffix string with the author information if available.

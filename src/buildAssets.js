@@ -3,10 +3,10 @@
  */
 import ora from "ora";
 
-import Builder from "./lib/Builder.mjs";
-import BhajanMeta from "./lib/data/bhajansData.mjs";
-import fetchDoheData from "./lib/data/dohasData.mjs";
-import QuoteMeta from "./lib/data/quotesData.mjs";
+import Builder from "./lib/Builder";
+import BhajanMeta from "./lib/data/bhajansData";
+import fetchDoheData from "./lib/data/dohasData";
+import QuoteMeta from "./lib/data/quotesData";
 
 /**
  * Main function to execute the build processes for Bhajan, Doha, and Quote.

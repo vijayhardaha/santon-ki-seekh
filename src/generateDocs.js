@@ -2,10 +2,10 @@ import fs from "fs/promises";
 import path from "path";
 
 import ora from "ora"; // For ES modules
-import prettier from "prettier";
+import { prettier } from "prettier";
 
-import { latinToHindiNumber, padIndex } from "./lib/helpers/dataGenerator.mjs";
-import { SANT_KABIR } from "../src/lib/helpers/constants.mjs";
+import { latinToHindiNumber, padIndex } from "./lib/helpers/dataGenerator";
+import { SANT_KABIR } from "../src/lib/helpers/constants";
 
 /**
  * Generates markdown content from an array of entries.
