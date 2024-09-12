@@ -81,23 +81,39 @@ const createMarkdownFiles = async (data, spinner) => {
 const main = async () => {
 	const spinner = ora("Fetching data and creating markdown files...").start();
 
-	const filePath = path.resolve(process.cwd(), "src/data", "couplets.json");
-
 	try {
-		// Check if the file exists
-		await fs.access(filePath, fs.constants.F_OK);
+		const response = await fetch("https://kabir-ke-dohe-api.vercel.app/api/couplets?perPage=-1");
 
-		const data = JSON.parse(await fs.readFile(filePath, "utf8"));
+		// Check if the response is OK (status code 2xx)
+		if (!response.ok) {
+			throw new Error(`API request failed with status ${response.status}: ${response.statusText}`);
+		}
 
-		const filterData = data.map(({ unique_slug, couplet_hindi }) => {
+		const data = await response.json();
+
+		// Check if the API response has a success flag
+		if (!data.success) {
+			throw new Error("API returned an unsuccessful response.");
+		}
+
+		const couplets = data.data.couplets;
+
+		// Check if couplets data is valid
+		if (!Array.isArray(couplets) || couplets.length === 0) {
+			throw new Error("No couplets found in the API response.");
+		}
+
+		const filterData = couplets.map(({ unique_slug, couplet_hindi }) => {
 			return { id: unique_slug, author: SANT_KABIR, content: couplet_hindi };
 		});
 
+		// Create markdown files from filtered data
 		await createMarkdownFiles(filterData, spinner);
 		spinner.succeed("Markdown files created successfully.");
 	} catch (error) {
+		// Handle any errors that occur during the process
 		spinner.fail("Error reading or processing data:");
-		console.error(error);
+		console.error(error.message); // Log specific error message
 	}
 };
 
