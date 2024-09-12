@@ -14,16 +14,15 @@
 	},
 	"author": "Vijay Hardaha",
 	"license": "MIT",
-	"dependencies": {
-		"json-2-csv": "^5.5.5",
-		"ora": "^8.1.0"
-	},
 	"devDependencies": {
+		"@babel/eslint-parser": "^7.25.1",
 		"eslint": "^8.57.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-import": "^2.30.0",
 		"eslint-plugin-jsx-a11y": "^6.10.0",
 		"eslint-plugin-prettier": "^5.2.1",
+		"json-2-csv": "^5.5.5",
+		"ora": "^8.1.0",
 		"prettier": "^3.3.3"
 	}
 }

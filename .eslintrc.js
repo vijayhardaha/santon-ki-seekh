@@ -1,52 +1,41 @@
-// .eslintrc.js
 module.exports = {
 	root: true,
 	extends: [
-		"next",
-		"next/core-web-vitals",
 		"eslint:recommended",
-		"plugin:react/recommended",
+		"plugin:import/recommended", // Ensure proper import/export handling.
 		"plugin:jsx-a11y/recommended",
-		"plugin:prettier/recommended", // Add Prettier integration
+		"plugin:prettier/recommended",
 	],
-	plugins: ["react", "jsx-a11y", "import", "prettier"],
+	plugins: ["import", "jsx-a11y", "prettier"],
 	env: {
-		browser: true, // Add browser environment for web applications.
-		node: true, // Add Node.js environment for server-side code.
-		es6: true, // Enable ES6 syntax.
+		node: true, // Ensure the node environment is enabled.
+		es2024: true, // Enable latest ECMAScript features.
 	},
+	parser: "@babel/eslint-parser", // Babel parser ensures ES module syntax is recognized.
 	parserOptions: {
-		ecmaVersion: 2024, // Set to latest ECMAScript version.
-		sourceType: "module",
+		ecmaVersion: 2024, // Latest ECMAScript features.
+		sourceType: "module", // Enable ES module syntax.
+		requireConfigFile: false, // Disable need for babel.config.json.
 	},
 	rules: {
-		// Customize ESLint rules here
-		"react/react-in-jsx-scope": "off", // Next.js does not require importing React in JSX files.
-		"prettier/prettier": "error", // Enforce Prettier formatting as errors.
+		"prettier/prettier": "error", // Ensure Prettier formats are enforced.
 		"import/order": [
 			"error",
 			{
 				groups: ["builtin", "external", "internal"],
-				pathGroups: [
-					{
-						pattern: "react",
-						group: "external",
-						position: "before",
-					},
-				],
-				pathGroupsExcludedImportTypes: ["react"],
 				alphabetize: {
 					order: "asc",
 					caseInsensitive: true,
 				},
 				"newlines-between": "always",
-				warnOnUnassignedImports: true,
 			},
 		],
 	},
 	settings: {
-		react: {
-			version: "detect",
+		"import/resolver": {
+			node: {
+				extensions: [".js", ".mjs", ".json"],
+			},
 		},
 	},
 };
