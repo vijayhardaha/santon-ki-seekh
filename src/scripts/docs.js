@@ -3,9 +3,9 @@ import path from "path";
 
 import ora from "ora";
 
-import { SANT_KABIR } from "./lib/helpers/constants.js";
-import { fetchCouplets } from "./lib/helpers/couplets.js";
-import { latinToHindiNumber, padIndex } from "./lib/helpers/dataGenerator.js";
+import { SANT_KABIR } from "../lib/helpers/constants.js";
+import { fetchCouplets } from "../lib/helpers/couplets.js";
+import { latinToHindiNumber, padIndex } from "../lib/helpers/dataGenerator.js";
 
 /**
  * Generates markdown content from an array of entries.
