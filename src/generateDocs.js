@@ -4,6 +4,7 @@ import path from "path";
 import ora from "ora";
 
 import { SANT_KABIR } from "./lib/helpers/constants.js";
+import { fetchCouplets } from "./lib/helpers/couplets.js";
 import { latinToHindiNumber, padIndex } from "./lib/helpers/dataGenerator.js";
 
 /**
@@ -78,26 +79,7 @@ const main = async () => {
 	const spinner = ora("Fetching data and creating markdown files...").start();
 
 	try {
-		const response = await fetch("https://kabir-ke-dohe-api.vercel.app/api/couplets?perPage=-1");
-
-		// Check if the response is OK (status code 2xx)
-		if (!response.ok) {
-			throw new Error(`API request failed with status ${response.status}: ${response.statusText}`);
-		}
-
-		const data = await response.json();
-
-		// Check if the API response has a success flag
-		if (!data.success) {
-			throw new Error("API returned an unsuccessful response.");
-		}
-
-		const couplets = data.data.couplets;
-
-		// Check if couplets data is valid
-		if (!Array.isArray(couplets) || couplets.length === 0) {
-			throw new Error("No couplets found in the API response.");
-		}
+		const couplets = await fetchCouplets();
 
 		const filterData = couplets.map(({ unique_slug, couplet_hindi }) => {
 			return { id: unique_slug, author: SANT_KABIR, content: couplet_hindi };
