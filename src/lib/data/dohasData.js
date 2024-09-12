@@ -1,5 +1,5 @@
-import { SANT_KABIR } from "../helpers/constants";
-import { padIndex } from "../helpers/dataGenerator";
+import { SANT_KABIR } from "../helpers/constants.js";
+import { padIndex } from "../helpers/dataGenerator.js";
 
 // Function to fetch data from the given API endpoint
 async function fetchData() {

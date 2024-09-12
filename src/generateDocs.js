@@ -1,11 +1,10 @@
 import fs from "fs/promises";
 import path from "path";
 
-import ora from "ora"; // For ES modules
-import { prettier } from "prettier";
+import ora from "ora";
 
-import { latinToHindiNumber, padIndex } from "./lib/helpers/dataGenerator";
-import { SANT_KABIR } from "../src/lib/helpers/constants";
+import { SANT_KABIR } from "./lib/helpers/constants.js";
+import { latinToHindiNumber, padIndex } from "./lib/helpers/dataGenerator.js";
 
 /**
  * Generates markdown content from an array of entries.
@@ -63,11 +62,8 @@ const createMarkdownFiles = async (data, spinner) => {
 		const content = `${heading}\n\n${generateMarkdownContent(entries, startNum)}`;
 		const fileName = `sant-kabir-ke-dohe-${padNumber(initial, 2)}.md`;
 		const filePath = path.join(docsDir, fileName);
-		const finalContent = await prettier.format(`${content}`, {
-			parser: "markdown",
-		});
 
-		await fs.writeFile(filePath, finalContent, "utf8");
+		await fs.writeFile(filePath, content, "utf8");
 		spinner.start(`File created: ${path.basename(filePath)}`);
 		initial++;
 	}

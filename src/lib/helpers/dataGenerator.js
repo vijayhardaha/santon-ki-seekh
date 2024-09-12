@@ -2,10 +2,9 @@
  * Import necessary packages and functions.
  */
 import { json2csv } from "json-2-csv";
-import { prettier } from "prettier";
 
-import { AUTHOR_PREFIX } from "./constants";
-import { joinPath, writeFile } from "./fileSystemUtils";
+import { AUTHOR_PREFIX } from "./constants.js";
+import { joinPath, writeFile } from "./fileSystemUtils.js";
 
 /**
  * Generates a suffix string with the author information if available.
@@ -106,7 +105,6 @@ export const generateData = async (builder, type) => {
 			break;
 		case "md":
 			fileData = generateMd(data, mdTitle, appendNumber);
-			fileData = await prettier.format(`${fileData}`, { parser: "markdown" });
 			break;
 		case "csv":
 			fileData = await generateCSV(data);

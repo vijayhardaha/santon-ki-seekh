@@ -1,8 +1,8 @@
 /**
  * Import necessary packages and functions.
  */
-import { generateData } from "./helpers/dataGenerator";
-import { joinPath, makeDir } from "./helpers/fileSystemUtils";
+import { generateData } from "./helpers/dataGenerator.js";
+import { joinPath, makeDir } from "./helpers/fileSystemUtils.js";
 
 /**
  * Builder module definition
