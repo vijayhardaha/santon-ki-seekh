@@ -1,6 +1,6 @@
 {
   "name": "santon-ki-seekh",
-  "version": "1.0.10",
+  "version": "1.1.0",
   "description": "यह संग्रह आध्यात्मिक शिक्षाओं का एक चयन है, जिसमें संत कबीर के भजन और दोहे, महत्वपूर्ण उद्धरण, और आध्यात्मिकता से संबंधित प्रमुख शब्दों और विषयों की परिभाषाएँ शामिल हैं।",
   "keywords": [
     "Kabir",
@@ -66,5 +66,8 @@
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.67.0",
     "vitest": "^4.1.10"
-  }
+  },
+  "trustedDependencies": [
+    "unrs-resolver"
+  ]
 }
