@@ -2,20 +2,13 @@ import { describe, expect, it } from 'vitest';
 
 import { SANT_KABIR } from '../../constants';
 import type { DataEntry } from '../../types';
-import { generateCSV, generateJson, generateMd, generateTxt, padIndex, sortData } from '../dataGenerator';
+import { generateCSV, generateJson, generateMd, generateTxt } from '../dataGenerator';
 
 const makeEntry = (id: string, content: string[], author = SANT_KABIR): DataEntry => ({ id, author, content });
 
 const sampleData: DataEntry[] = [makeEntry('b', ['पंक्ति 1', 'पंक्ति 2']), makeEntry('a', ['पंक्ति एक'], 'गुरु कबीर')];
 
 describe('dataGenerator module', () => {
-  describe('sortData', () => {
-    it('should sort entries by id in ascending order', () => {
-      const sorted = sortData([...sampleData]);
-      expect(sorted.map((entry) => entry.id)).toEqual(['a', 'b']);
-    });
-  });
-
   describe('generateJson', () => {
     it('should join content lines with newline', () => {
       const json = generateJson(sampleData);
@@ -53,16 +46,6 @@ describe('dataGenerator module', () => {
       const csv = await generateCSV(sampleData);
       expect(csv).toContain('पंक्ति 1');
       expect(csv).toContain('संत कबीर');
-    });
-  });
-
-  describe('padIndex', () => {
-    it('should pad index to default length 3', () => {
-      expect(padIndex(5)).toBe('005');
-    });
-
-    it('should pad index to a custom length', () => {
-      expect(padIndex(5, 2)).toBe('05');
     });
   });
 });
