@@ -57,6 +57,12 @@ describe('args module', () => {
       expect(result).toBeUndefined();
     });
 
+    it('should ignore --limit <n> flag with non-positive value', () => {
+      const args: string[] = ['bun', 'run', 'src/build.ts', '--limit', '0'];
+      const result = parseFileLimit(args);
+      expect(result).toBeUndefined();
+    });
+
     it('should prefer --limit=<n> flag over MAX_FILES env var', () => {
       const args: string[] = ['bun', 'run', 'src/build.ts', '--limit=7'];
       process.env.MAX_FILES = '20';
