@@ -1,6 +1,10 @@
 import { GURU_KABIR } from '../constants';
 import type { BuildMeta, DataEntry } from '../types';
 
+/**
+ * Array of bhajan (prayer) entries by Sant Kabir.
+ * Each entry contains the unique ID, author, and content lines.
+ */
 const data: DataEntry[] = [
   {
     id: 'amarpur-le-chalo-sajna',
@@ -383,6 +387,10 @@ const data: DataEntry[] = [
   },
 ];
 
+/**
+ * Metadata for building the Santon Ke Bhajan (Prayers) collection.
+ * Contains all bhajan entries by Sant Kabir for asset generation.
+ */
 const BhajanMeta: BuildMeta = {
   fileName: 'santon-ke-bhajan',
   mdTitle: 'संतों के भजन (Prayers)',
