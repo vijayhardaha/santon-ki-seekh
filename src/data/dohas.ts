@@ -1,6 +1,5 @@
 import { SANT_KABIR } from '../constants';
-import { padIndex } from '../lib/dataGenerator';
-import { splitCoupletText } from '../lib/formatting';
+import { padNumber, splitCoupletText } from '../lib/formatting';
 import type { ApiPost, DataEntry } from '../types';
 
 /**
@@ -15,7 +14,7 @@ export function convertCoupletsToDohas(posts: ApiPost[]): DataEntry[] {
   return posts
     .filter((post) => post.text_hi && post.text_hi.trim() !== '')
     .map((post) => ({
-      id: `${post.slug}-${padIndex(post.number)}`,
+      id: `${post.slug}-${padNumber(post.number, 3)}`,
       author: SANT_KABIR,
       content: splitCoupletText(post.text_hi),
     }));
