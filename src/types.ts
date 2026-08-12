@@ -39,7 +39,7 @@ export interface ApiResponse {
 }
 
 /**
- * A single record used to build the downloadable assets (bhajan, doha, quote).
+ * A single record used to build the downloadable assets (bhajan or doha).
  *
  * @type {DataEntry}
  * @property {string} id - Unique slug/id of the entry.
