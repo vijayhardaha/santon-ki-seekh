@@ -2,7 +2,7 @@
  * Build Command
  *
  * Orchestrates the full build: the dohe markdown collections (docs/dohe) and
- * the downloadable assets (dist/) for bhajans, dohas and quotes.
+ * the downloadable assets (dist/) for bhajans and dohas.
  *
  * Usage:
  *   bun run build

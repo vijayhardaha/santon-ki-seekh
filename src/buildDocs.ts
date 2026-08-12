@@ -16,9 +16,10 @@ import { mkdir, rm, writeFile } from 'node:fs/promises';
 import { basename, join, resolve } from 'node:path';
 
 import ora from 'ora';
+import { format } from 'prettier';
 
 import { ENTRIES_PER_FILE, SANT_KABIR } from './constants';
-import { fetchAllCouplets, generateDoheMarkdown, padNumber, parseFileLimit } from './lib';
+import { fetchAllCouplets, generateDoheMarkdown, padNumber, parseFileLimit, splitCoupletText } from './lib';
 import type { DoheCollectionEntry } from './lib/formatting';
 
 /**
@@ -37,7 +38,10 @@ export async function buildDocs(argv?: string[]): Promise<number> {
   try {
     const posts = await fetchAllCouplets();
 
-    const entries: DoheCollectionEntry[] = posts.map((post) => ({ content: post.text_hi, author: SANT_KABIR }));
+    const entries: DoheCollectionEntry[] = posts.map((post) => ({
+      content: splitCoupletText(post.text_hi).join('\n'),
+      author: SANT_KABIR,
+    }));
 
     const docsDir = resolve(process.cwd(), 'docs', 'dohe');
 
@@ -54,7 +58,10 @@ export async function buildDocs(argv?: string[]): Promise<number> {
       const endNumber = padNumber(Math.min(startNum + ENTRIES_PER_FILE - 1, entries.length), 2);
 
       const heading = `# संत कबीर के दोहे संग्रह - ${startNumber} to ${endNumber}`;
-      const content = `${heading}\n\n${generateDoheMarkdown(slice, startNum)}`;
+      let content = `${heading}\n\n${generateDoheMarkdown(slice, startNum)}`;
+
+      // Format the markdown with Prettier (same approach as kabir-ke-dohe).
+      content = await format(content, { parser: 'markdown' });
 
       const fileName = `sant-kabir-ke-dohe-${padNumber(fileCount + 1, 2)}.md`;
       const filePath = join(docsDir, fileName);

@@ -1,8 +1,8 @@
 /**
  * Build Assets Script
  *
- * Builds the downloadable assets (raw.json, json, txt, md, csv) for bhajans,
- * dohas (fetched live from the Kabir Dohe API) and quotes into `dist/`.
+ * Builds the downloadable assets (raw.json, json, txt, md, csv) for bhajans
+ * and dohas (fetched live from the Kabir Dohe API) into `dist/`.
  *
  * Usage:
  *   bun run build:assets
@@ -14,13 +14,12 @@ import ora from 'ora';
 
 import BhajanMeta from './data/bhajans';
 import { convertCoupletsToDohas } from './data/dohas';
-import QuoteMeta from './data/quotes';
 import { fetchAllCouplets } from './lib';
 import { Builder } from './lib/builder';
 import type { BuildMeta } from './types';
 
 /**
- * Builds all downloadable assets (bhajans, dohas and quotes) into `dist/`.
+ * Builds all downloadable assets (bhajans and dohas) into `dist/`.
  *
  * @returns {Promise<void>} Resolves when all asset builds are complete.
  */
@@ -44,11 +43,6 @@ export async function buildAssets(): Promise<void> {
     };
     await Builder.run(DoheMeta);
     spinner.succeed('Dohe assets built successfully!');
-
-    // Execute Quote build process.
-    spinner.start('Executing Quotes build process...');
-    await Builder.run(QuoteMeta);
-    spinner.succeed('Quotes assets built successfully!');
   } catch (error) {
     spinner.fail('An error occurred during the assets build process.');
     console.error(error instanceof Error ? error.message : String(error));
