@@ -34,11 +34,6 @@ export const SANT_KABIR = 'संत कबीर दास साहेब';
 export const GURU_KABIR = 'गुरु कबीर दास साहेब';
 
 /**
- * Author name used for Acharya Prashant quotes.
- */
-export const ACHARYA_PRASHANT = 'आचार्य प्रशांत';
-
-/**
  * Hindi (Devanagari) digits for converting Latin numbers to Hindi numerals.
  */
 export const HINDI_DIGITS = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'];
