@@ -13,7 +13,7 @@ export function latinToHindiNumber(latinNumber: number | string): string {
     .split('')
     .map((digit) => {
       const num = parseInt(digit, 10);
-      return Number.isNaN(num) ? digit : (HINDI_DIGITS[num] ?? digit);
+      return Number.isNaN(num) ? digit : HINDI_DIGITS[num];
     })
     .join('');
 }

@@ -11,9 +11,9 @@ describe('formatting module', () => {
       expect(latinToHindiNumber(9)).toBe('९');
     });
 
-    it('should convert multi-digit numbers to Hindi numerals', () => {
-      expect(latinToHindiNumber(123)).toBe('१२३');
-      expect(latinToHindiNumber('2050')).toBe('२०५०');
+    it('should pass through non-digit characters unchanged', () => {
+      expect(latinToHindiNumber('१+२')).toBe('१+२');
+      expect(latinToHindiNumber('1x2')).toBe('१x२');
     });
   });
 
