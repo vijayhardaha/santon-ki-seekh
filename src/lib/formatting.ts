@@ -19,6 +19,25 @@ export function latinToHindiNumber(latinNumber: number | string): string {
 }
 
 /**
+ * Splits raw Hindi couplet text at the danda (।) character into trimmed pada
+ * lines, re-appending a single danda (।) to every line except the last and a
+ * double danda (।।) to the final line. This reproduces the legacy multi-line
+ * couplet format used by the original JavaScript output.
+ *
+ * @param {string} text - The raw couplet Hindi text (typically a single line).
+ *
+ * @returns {string[]} The couplet pada lines with terminating dandas.
+ */
+export function splitCoupletText(text: string): string[] {
+  const lines = text
+    .split('।')
+    .map((line) => line.trim())
+    .filter((line) => line.length > 0);
+
+  return lines.map((line, i) => (i === lines.length - 1 ? `${line}।।` : `${line}।`));
+}
+
+/**
  * Pads a number with leading zeros to a given width.
  *
  * @param {number} number - The number to pad.
@@ -57,5 +76,5 @@ export function generateDoheMarkdown(entries: DoheCollectionEntry[], startNum: n
       const entryIndex = latinToHindiNumber(String(startNum + index).padStart(2, '0'));
       return `- ${entry.content.split('\n').join('\\\n')}${entryIndex}।।\n\n  — ${entry.author}`;
     })
-    .join('\n\n***\n\n');
+    .join('\n\n---\n\n');
 }
