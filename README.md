@@ -103,18 +103,12 @@
 
 Below are the assets available for download, categorized based on their content and format.
 
-| Label                   | Download Links                                                                                                |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------- |
-| Acharya Prashant Quotes | [CSV][acharya-csv], [JSON][acharya-json], [MD][acharya-md], [JSON(RAW)][acharya-json-raw], [TXT][acharya-txt] |
-| Santo Ke Bhajan         | [CSV][bhajan-csv], [JSON][bhajan-json], [MD][bhajan-md], [JSON(RAW)][bhajan-json-raw], [TXT][bhajan-txt]      |
-| Santo Ke Dohe           | [CSV][dohe-csv], [JSON][dohe-json], [MD][dohe-md], [JSON(RAW)][dohe-json-raw], [TXT][dohe-txt]                |
-| All-in-One Assets       | [ZIP][all-in-one]                                                                                             |
+| Label             | Download Links                                                                                           |
+| ----------------- | -------------------------------------------------------------------------------------------------------- |
+| Santo Ke Bhajan   | [CSV][bhajan-csv], [JSON][bhajan-json], [MD][bhajan-md], [JSON(RAW)][bhajan-json-raw], [TXT][bhajan-txt] |
+| Santo Ke Dohe     | [CSV][dohe-csv], [JSON][dohe-json], [MD][dohe-md], [JSON(RAW)][dohe-json-raw], [TXT][dohe-txt]           |
+| All-in-One Assets | [ZIP][all-in-one]                                                                                        |
 
-[acharya-csv]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.0.10/acharya-prashant-quotes.csv
-[acharya-json]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.0.10/acharya-prashant-quotes.json
-[acharya-md]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.0.10/acharya-prashant-quotes.md
-[acharya-json-raw]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.0.10/acharya-prashant-quotes.raw.json
-[acharya-txt]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.0.10/acharya-prashant-quotes.txt
 [bhajan-csv]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.0.10/santon-ke-bhajan.csv
 [bhajan-json]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.0.10/santon-ke-bhajan.json
 [bhajan-md]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.0.10/santon-ke-bhajan.md
@@ -135,7 +129,7 @@ This project is written in **TypeScript** and uses [Bun](https://bun.sh) to run 
 | ---------------------- | ---------------------------------------------------------------- |
 | `bun run build`        | Generate dohe collections (`docs/dohe`) and all assets (`dist/`) |
 | `bun run build:docs`   | Generate the dohe markdown collections only                      |
-| `bun run build:assets` | Generate the downloadable assets only (bhajans, dohas, quotes)   |
+| `bun run build:assets` | Generate the downloadable assets only (bhajans, dohas)           |
 | `bun run build:test`   | Run a quick limited build (`--limit 1`)                          |
 | `bun test`             | Run the unit tests (Vitest)                                      |
 | `bun run tsc`          | Type-check the project                                           |
@@ -145,7 +139,7 @@ To limit the number of collection files generated, pass `--limit <n>` or set the
 
 ## Contributing
 
-We welcome your contributions to this repository! If you would like to add a new bhajan, doha, quote, or definition, please submit a pull request. Your contributions are greatly appreciated!
+We welcome your contributions to this repository! If you would like to add a new bhajan or doha, please submit a pull request. Your contributions are greatly appreciated!
 
 For those interested in creating projects related to Kabir das couplets and needing comprehensive data, you can use the same API used by this project:
 
@@ -153,7 +147,7 @@ For those interested in creating projects related to Kabir das couplets and need
 curl https://kabirdoheapi.vercel.app/api/couplets
 ```
 
-The API is maintained in the [kabir-ke-dohe](https://github.com/vijayhardaha/kabir-ke-dohe) repository.
+All API details are available at [https://kabirdoheapi.vercel.app](https://kabirdoheapi.vercel.app).
 
 ## License
 
