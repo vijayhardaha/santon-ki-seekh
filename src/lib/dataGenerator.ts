@@ -16,15 +16,6 @@ import { latinToHindiNumber, padNumber } from './formatting';
 const generateSuffix = (author: string): string => (author ? `\n\n${AUTHOR_PREFIX} ${author}` : '');
 
 /**
- * Sorts data entries by their id field in ascending alphabetical order.
- *
- * @param {DataEntry[]} data - The array of data entries to sort.
- *
- * @returns {DataEntry[]} A new array with entries sorted by id.
- */
-export const sortData = (data: DataEntry[]): DataEntry[] => data.sort((a, b) => (a.id > b.id ? 1 : -1));
-
-/**
  * Generate JSON data from input data (content lines joined into a single string).
  *
  * @param {DataEntry[]} data - Input data.
@@ -46,7 +37,7 @@ export function generateJson(data: DataEntry[]): Array<Omit<DataEntry, 'content'
  *
  * @returns {string} Formatted text data.
  */
-export function generateTxt(data: DataEntry[], appendNumber = false): string {
+export function generateTxt(data: DataEntry[], appendNumber: boolean = false): string {
   return data
     .map((dataSet, index) => {
       const content = dataSet.content.join('\n');
@@ -65,7 +56,7 @@ export function generateTxt(data: DataEntry[], appendNumber = false): string {
  *
  * @returns {string} Formatted markdown data.
  */
-export function generateMd(data: DataEntry[], title = '', appendNumber = false): string {
+export function generateMd(data: DataEntry[], title: string = '', appendNumber: boolean = false): string {
   const titlePrefix = title ? `# ${title}\n\n` : '';
 
   const output = data
@@ -125,17 +116,4 @@ export const generateData = async (builder: BuildContext, type: string): Promise
   }
 
   await writeFile(filePath, fileData);
-};
-
-/**
- * Pads the index with leading zeros or a specified character to ensure a desired length.
- *
- * @param {number} index - The index to pad.
- * @param {number} [length] - The desired length of the resulting string. Default is 3.
- * @param {string | number} [char] - The character to use for padding. Default is "0".
- *
- * @returns {string} The padded index as a string.
- */
-export const padIndex = (index: number, length = 3, char: string | number = 0): string => {
-  return index.toString().padStart(length, char.toString());
 };
