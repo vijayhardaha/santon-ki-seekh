@@ -127,11 +127,33 @@ Below are the assets available for download, categorized based on their content 
 [dohe-txt]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.0.10/santon-ke-dohe.txt
 [all-in-one]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.0.10/all-in-one-assets.zip
 
+## Development
+
+This project is written in **TypeScript** and uses [Bun](https://bun.sh) to run the build scripts and tests directly.
+
+| Script                 | Description                                                      |
+| ---------------------- | ---------------------------------------------------------------- |
+| `bun run build`        | Generate dohe collections (`docs/dohe`) and all assets (`dist/`) |
+| `bun run build:docs`   | Generate the dohe markdown collections only                      |
+| `bun run build:assets` | Generate the downloadable assets only (bhajans, dohas, quotes)   |
+| `bun run build:test`   | Run a quick limited build (`--limit 1`)                          |
+| `bun test`             | Run the unit tests (Vitest)                                      |
+| `bun run tsc`          | Type-check the project                                           |
+| `bun run lint`         | Lint the project                                                 |
+
+To limit the number of collection files generated, pass `--limit <n>` or set the `MAX_FILES` environment variable, e.g. `MAX_FILES=2 bun run build:docs`.
+
 ## Contributing
 
 We welcome your contributions to this repository! If you would like to add a new bhajan, doha, quote, or definition, please submit a pull request. Your contributions are greatly appreciated!
 
-For those interested in creating projects related to Kabir das couplets and needing comprehensive data, you can access our API at [https://github.com/vijayhardaha/kabir-ke-dohe-api](https://github.com/vijayhardaha/kabir-ke-dohe-api).
+For those interested in creating projects related to Kabir das couplets and needing comprehensive data, you can use the same API used by this project:
+
+```bash
+curl https://kabirdoheapi.vercel.app/api/couplets
+```
+
+The API is maintained in the [kabir-ke-dohe](https://github.com/vijayhardaha/kabir-ke-dohe) repository.
 
 ## License
 

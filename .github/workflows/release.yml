@@ -3,58 +3,52 @@ name: Release
 on:
   push:
     tags:
-      - 'v*'
+      - "v*"
 
 jobs:
   build:
+    name: Build and Release
     runs-on: ubuntu-latest
 
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v6
 
-    - name: Get Tag
-      id: tag
-      run: echo "tag=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
+      - name: Extract version from tag
+        id: tag
+        run: echo "tag=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20'
+      - name: Setup Bun runtime
+        uses: oven-sh/setup-bun@v2
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install project dependencies
+        run: bun install
 
-    - name: Build the project
-      run: npm run build:assets
+      - name: Build production assets
+        run: bun run build:assets
 
-    - name: Rename dist folder to all-in-one-assets
-      run: mv dist all-in-one-assets
+      - name: Prepare release artifact
+        run: |
+          mv dist all-in-one-assets
+          zip -r all-in-one-assets.zip all-in-one-assets/
 
-    - name: Zip the all-in-one-assets folder
-      run: zip -r all-in-one-assets.zip all-in-one-assets/
+      - name: Collect additional release files
+        id: release_files
+        run: |
+          extra_files=$(find ./all-in-one-assets -type f \( -name "*.txt" -o -name "*.json" -o -name "*.md" -o -name "*.csv" \)) 
+          echo "files<<EOF" >> $GITHUB_ENV
+          echo "$extra_files" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
 
-    - name: Find files to upload
-      id: find_files
-      run: |
-        files=$(find ./all-in-one-assets -type f \( -name "*.txt" -o -name "*.json" -o -name "*.md" -o -name "*.csv" \))
-        echo "files<<EOF" >> $GITHUB_ENV
-        echo "$files" >> $GITHUB_ENV
-        echo "EOF" >> $GITHUB_ENV
-
-    - name: Create GitHub Release
-      id: create_release
-      uses: ncipollo/release-action@v1
-      with:
-        artifacts: |
-          all-in-one-assets.zip
-          ${{ env.files }}
-        token: ${{ env.GITHUB_TOKEN }}
-        tag: ${{ github.ref }}
-        name: ${{ env.tag }}
-        draft: false
-        prerelease: false
-        makeLatest: true
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v3
+        with:
+          files: |
+            all-in-one-assets.zip
+            ${{ env.files }}
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

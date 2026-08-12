@@ -1,5 +1,45 @@
-node_modules
-.next
-out
-public/static
-.git
+# =======================================================================
+# Prettier Ignore
+# =======================================================================
+# Purpose: Tell Prettier which files to skip to avoid formatting
+#          generated or binary files (keeps diffs small and fast).
+# Docs:    https://prettier.io/docs/ignore
+# =======================================================================
+
+# ----------------------------------------------------------------------
+# Package Manager Lockfiles
+# ----------------------------------------------------------------------
+# Formatting these can cause massive, merge-breaking diffs.
+bun.lock
+composer.lock
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# ----------------------------------------------------------------------
+# Common Auto-Generated YAML
+# ----------------------------------------------------------------------
+# These are typically generated or CI-related - not meant to be formatted.
+._circleci/
+.gitlab/
+.gitlab-ci.yml
+azure-pipelines.yml
+bitbucket-pipelines.yml
+docker-compose.yaml
+docker-compose.yml
+*.kubeconfig
+
+# ----------------------------------------------------------------------
+# Public & Static Assets
+# ----------------------------------------------------------------------
+# Committed CSS assets, vendor stylesheets, theme CSS (WordPress).
+assets/
+public/
+static/
+
+# ----------------------------------------------------------------------
+# Minified & Generated Files
+# ----------------------------------------------------------------------
+*.min.css
+*.min.js
+*.min.map

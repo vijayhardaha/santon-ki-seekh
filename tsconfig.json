@@ -1,0 +1,26 @@
+// ========================================================================
+// TypeScript Configuration
+// ========================================================================
+// Purpose: Static type-checking for the collections build scripts.
+// Docs:    https://www.typescriptlang.org/tsconfig
+// ========================================================================
+
+{
+  "extends": "@vijayhardaha/dev-config/tsconfig",
+  "compilerOptions": {
+    // ---- Module resolution & target ----
+    "moduleResolution": "bundler",
+    "module": "esnext",
+    "target": "esnext",
+    "types": ["node"],
+
+    // ---- Output ----
+    "noEmit": true
+  },
+
+  // ---- Includes ----
+  "include": ["src/**/*.ts", "*.config.mjs", "*.config.ts"],
+
+  // ---- Excludes ----
+  "exclude": ["node_modules", "dist", "docs"]
+}

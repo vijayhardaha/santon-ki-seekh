@@ -1,32 +1,73 @@
-# This file is an EditorConfig file used to maintain consistent coding style across various editors and IDEs.
-# For more information, visit editorconfig.org
+# ======================================================================
+# EditorConfig
+# ======================================================================
+# Purpose: Shared EditorConfig to enforce consistent formatting across
+#          editors
+# Docs:    https://editorconfig.org/
+# ======================================================================
+# Usage:
+# 	- Ensure your editor supports EditorConfig (most IDEs support it
+#     by default)
+# 	- Rules are applied top-to-bottom; more specific file globs override
+# 	  earlier rules
+# 	- Update this file to change team-wide defaults; prefer small,
+# 	  focused sections
+# ======================================================================
 
-# Set the configuration for the root level of the project
+# Stop searching for other .editorconfig files in parent directories
 root = true
 
-# Define default formatting settings for all files
+# ----------------------------------------------------------------------
+# Global Settings (Applied to all files)
+# ----------------------------------------------------------------------
 [*]
-charset = utf-8                        # Set character encoding to UTF-8
-end_of_line = lf                       # Set line endings to LF (Unix-style)
-indent_size = 4                        # Set the indentation size to 4 spaces
-indent_style = tab                     # Use tabs for indentation
-insert_final_newline = true            # Ensure a newline is inserted at the end of files
-trim_trailing_whitespace = true        # Remove trailing whitespace at the end of lines
+# Ensure cross-platform compatibility with standard UTF-8 encoding
+charset = utf-8
 
-# Define specific formatting settings for text files
-[*.txt]
-trim_trailing_whitespace = false       # Preserve trailing whitespace in text files
+# Use Unix-style line feeds (\n) to prevent "mismatched line ending"
+# Git warnings
+end_of_line = lf
 
-# Define specific formatting settings for Markdown, JSON, and YAML files
-[*.{md,json,yml}]
-trim_trailing_whitespace = false       # Preserve trailing whitespace in Markdown, JSON, and YAML files
-indent_style = space                   # Use spaces for indentation
-indent_size = 2                        # Set indentation size to 2 spaces
+# Project standard: Spaces are the industry standard for consistency
+indent_style = space
 
-# Define specific formatting settings for JSON files
-[*.json]
-indent_style = tab                     # Use tabs for indentation in JSON files
-indent_size = 2                        # Set indentation size to 2 spaces
+# Default indent size (Will be overridden by specific languages below)
+indent_size = 2
 
-[*.{js,mjs,cjs,jsx,ts,tsx}]
-indent_size = 2                        # Set indentation size to 2 spaces
+# Clean up: remove invisible spaces at the end of lines on save
+trim_trailing_whitespace = true
+
+# Standards: Ensure files end with a blank line for POSIX compatibility
+insert_final_newline = true
+
+# ----------------------------------------------------------------------
+# Language Specific Overrides
+# ----------------------------------------------------------------------
+# Applies language-specific EditorConfig rules that override the global
+# settings for targeted file types.
+# ----------------------------------------------------------------------
+
+# ---- Stylesheet languages ----
+# Standard: 2 spaces for CSS/SASS to avoid deep nesting indentation
+[*.{css,scss,sass}]
+indent_size = 2
+
+# ---- Scripting languages ----
+# Standard: 2 spaces for JS/TS and related files
+[*.{js,ts,mjs,cjs,jsx,tsx}]
+indent_size = 2
+
+# ---- Shell scripts ----
+# Standard: 2 spaces for Bash scripts
+[*.{sh,bash}]
+indent_size = 2
+
+# ---- Data & documentation ----
+# Standard: 2 spaces for JSON/YAML/Markdown files
+[*.{md,mdx,json,jsonc,yml,yaml}]
+indent_size = 2
+
+# ---- Backend languages ----
+# Standard: 4 spaces for Python/PHP (PEP8 / PSR-12)
+[*.{py,php}]
+indent_size = 4
