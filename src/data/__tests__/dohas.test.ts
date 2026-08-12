@@ -39,6 +39,17 @@ describe('dohas mapper', () => {
     expect(entries[0].id).toBe('kabir-doha-001');
   });
 
+  it('should split couplet text into multiple pada lines', () => {
+    const entries = convertCoupletsToDohas([
+      makePost({ text_hi: 'बलिहारी गुरु आपनो, घड़ी-घड़ी सौ सौ बार। मानुष से देवत किया, करत न लागी बार।।' }),
+    ]);
+
+    expect(entries[0].content).toEqual([
+      'बलिहारी गुरु आपनो, घड़ी-घड़ी सौ सौ बार।',
+      'मानुष से देवत किया, करत न लागी बार।।',
+    ]);
+  });
+
   it('should percent-pad the number into the entry id', () => {
     const entries = convertCoupletsToDohas([makePost({ number: 123 })]);
     expect(entries[0].id).toBe('kabir-doha-123');
