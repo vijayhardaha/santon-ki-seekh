@@ -2,29 +2,44 @@
   "name": "santon-ki-seekh",
   "version": "1.0.10",
   "description": "यह संग्रह आध्यात्मिक शिक्षाओं का एक चयन है, जिसमें संत कबीर के भजन और दोहे, महत्वपूर्ण उद्धरण, और आध्यात्मिकता से संबंधित प्रमुख शब्दों और विषयों की परिभाषाएँ शामिल हैं।",
+  "keywords": [
+    "Kabir",
+    "sant",
+    "bhajan",
+    "dohe",
+    "collections"
+  ],
+  "type": "module",
   "scripts": {
     "clean": "rm -rf docs/dohe dist",
     "clean:docs": "rm -rf docs/dohe",
-    "format:docs": "prettier --write 'docs/**/*.md' --log-level error",
     "build": "bun run src/build.ts",
     "build:docs": "bun run src/buildDocs.ts",
     "build:assets": "bun run src/buildAssets.ts",
     "build:test": "bun run src/build.ts --limit 1",
-    "tsc": "tsc --noEmit",
-    "typecheck": "tsc --noEmit",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "lint:check": "eslint . --max-warnings 0",
     "format": "prettier --write --log-level error .",
     "format:check": "prettier --check --log-level error .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "tsc": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "prepare": "husky"
   },
-  "type": "module",
-  "author": "Vijay Hardaha",
+  "author": {
+    "name": "Vijay Hardaha",
+    "url": "https://github.com/vijayhardaha"
+  },
   "license": "MIT",
+  "homepage": "https://github.com/vijayhardaha/santon-ki-seekh#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vijayhardaha/santon-ki-seekh.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vijayhardaha/santon-ki-seekh/issues"
+  },
   "devDependencies": {
     "@commitlint/cli": "^21.2.1",
     "@commitlint/config-conventional": "^21.2.0",
