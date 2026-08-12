@@ -109,17 +109,17 @@ Below are the assets available for download, categorized based on their content 
 | Santo Ke Dohe     | [CSV][dohe-csv], [JSON][dohe-json], [MD][dohe-md], [JSON(RAW)][dohe-json-raw], [TXT][dohe-txt]           |
 | All-in-One Assets | [ZIP][all-in-one]                                                                                        |
 
-[bhajan-csv]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.0.10/santon-ke-bhajan.csv
-[bhajan-json]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.0.10/santon-ke-bhajan.json
-[bhajan-md]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.0.10/santon-ke-bhajan.md
-[bhajan-json-raw]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.0.10/santon-ke-bhajan.raw.json
-[bhajan-txt]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.0.10/santon-ke-bhajan.txt
-[dohe-csv]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.0.10/santon-ke-dohe.csv
-[dohe-json]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.0.10/santon-ke-dohe.json
-[dohe-md]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.0.10/santon-ke-dohe.md
-[dohe-json-raw]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.0.10/santon-ke-dohe.raw.json
-[dohe-txt]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.0.10/santon-ke-dohe.txt
-[all-in-one]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.0.10/all-in-one-assets.zip
+[bhajan-csv]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.1.0/santon-ke-bhajan.csv
+[bhajan-json]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.1.0/santon-ke-bhajan.json
+[bhajan-md]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.1.0/santon-ke-bhajan.md
+[bhajan-json-raw]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.1.0/santon-ke-bhajan.raw.json
+[bhajan-txt]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.1.0/santon-ke-bhajan.txt
+[dohe-csv]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.1.0/santon-ke-dohe.csv
+[dohe-json]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.1.0/santon-ke-dohe.json
+[dohe-md]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.1.0/santon-ke-dohe.md
+[dohe-json-raw]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.1.0/santon-ke-dohe.raw.json
+[dohe-txt]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.1.0/santon-ke-dohe.txt
+[all-in-one]: https://github.com/vijayhardaha/santon-ki-seekh/releases/download/v1.1.0/all-in-one-assets.zip
 
 ## Development
 
